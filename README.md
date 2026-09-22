@@ -1,14 +1,23 @@
 # Field_Ops---ADS
 Projeto do curso de ADS da matéria de desenvolvimento web
 
-*Integrantes:*
+#### **Integrantes:**
 
-- Claudio Brito
+>- Claudio Brito
+>
+>- Daniel kakiuchi
+>
+>- João Pedro 
+>
+>- João Renato
+>
+>- Miguel Augusto
+>
 
-- Daniel kakiuchi
+## Sobre o Projeto
 
-- João Pedro 
+O FieldOps é uma plataforma desenvolvida ajudar o planejamento, execução e as inspeções que são realizadas em campos.
 
-- João Renato
+O sistema permite que os supervisores tenham maior facilidade na organização das inspeções que os técnicos realizam em suas atividades pelo aplicativo, registrando informações, fotos, checklists e possíveis problemas encontrados durante a inspeção.
 
-- Miguel Augusto
+---
