@@ -1,0 +1,960 @@
+/* ============================================================
+   FIELD OPS
+   CSS PRINCIPAL DO PROJETO
+   ============================================================ */
+
+
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+
+:root {
+
+    --fieldops-primary: #2563eb;
+    --fieldops-primary-dark: #1e3a8a;
+
+    --fieldops-background: #f5f7fb;
+    --fieldops-card: #ffffff;
+
+    --fieldops-text: #172033;
+    --fieldops-muted: #6b7280;
+
+    --fieldops-border: #e5e7eb;
+
+    --fieldops-blue: #2563eb;
+    --fieldops-yellow: #f59e0b;
+    --fieldops-purple: #7c3aed;
+    --fieldops-green: #16a34a;
+    --fieldops-red: #dc2626;
+
+    --fieldops-navbar: #172554;
+
+    --fieldops-radius: 12px;
+
+    --fieldops-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ============================================================
+   CONFIGURAÇÕES GERAIS
+   ============================================================ */
+
+body {
+
+    margin: 0;
+
+    background-color: var(--fieldops-background);
+
+    color: var(--fieldops-text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.fieldops-navbar {
+
+    background-color: var(--fieldops-navbar);
+
+    min-height: 70px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+
+.fieldops-navbar .navbar-brand {
+
+    font-size: 1.25rem;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.fieldops-navbar .navbar-brand strong {
+
+    color: #60a5fa;
+}
+
+
+.brand-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background-color: var(--fieldops-primary);
+
+    color: #ffffff;
+
+    font-size: 1.15rem;
+}
+
+
+.fieldops-navbar .nav-link {
+
+    color: rgba(255, 255, 255, 0.75);
+
+    padding: 0.7rem 0.85rem;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.fieldops-navbar .nav-link:hover {
+
+    color: #ffffff;
+
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+.fieldops-navbar .nav-link.active {
+
+    color: #ffffff;
+
+    background-color: rgba(37, 99, 235, 0.35);
+}
+
+
+/* ============================================================
+   PERFIL DO SUPERVISOR
+   ============================================================ */
+
+.supervisor-profile {
+
+    padding-left: 1rem;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.profile-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+}
+
+
+.profile-label {
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.7rem;
+}
+
+
+.profile-name {
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+
+.dashboard-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.dashboard-subtitle {
+
+    color: var(--fieldops-primary);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.dashboard-title {
+
+    margin-bottom: 0.25rem;
+
+    font-size: clamp(1.6rem, 3vw, 2rem);
+
+    font-weight: 700;
+
+    color: var(--fieldops-text);
+}
+
+
+.dashboard-date {
+
+    padding: 0.6rem 0.9rem;
+
+    background-color: #ffffff;
+
+    border:
+        1px solid var(--fieldops-border);
+
+    border-radius: 8px;
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   CARDS DE INDICADORES
+   ============================================================ */
+
+.indicator-card {
+
+    border: none;
+
+    border-radius: var(--fieldops-radius);
+
+    background-color: var(--fieldops-card);
+
+    box-shadow: var(--fieldops-shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.indicator-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.09);
+}
+
+
+.indicator-label {
+
+    margin-bottom: 0.35rem;
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+}
+
+
+.indicator-number {
+
+    margin: 0;
+
+    color: var(--fieldops-text);
+
+    font-size: 1.9rem;
+
+    font-weight: 700;
+}
+
+
+.indicator-description {
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.75rem;
+}
+
+
+.indicator-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 1.25rem;
+}
+
+
+.indicator-blue {
+
+    color: var(--fieldops-blue);
+
+    background-color: #dbeafe;
+}
+
+
+.indicator-yellow {
+
+    color: var(--fieldops-yellow);
+
+    background-color: #fef3c7;
+}
+
+
+.indicator-purple {
+
+    color: var(--fieldops-purple);
+
+    background-color: #ede9fe;
+}
+
+
+.indicator-red {
+
+    color: var(--fieldops-red);
+
+    background-color: #fee2e2;
+}
+
+
+/* ============================================================
+   CARDS DO DASHBOARD
+   ============================================================ */
+
+.dashboard-card {
+
+    border:
+        1px solid var(--fieldops-border);
+
+    border-radius: var(--fieldops-radius);
+
+    background-color: #ffffff;
+
+    box-shadow: var(--fieldops-shadow);
+}
+
+
+.section-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    color: var(--fieldops-primary);
+
+    background-color: #eff6ff;
+
+    font-size: 0.95rem;
+}
+
+
+.section-title {
+
+    color: var(--fieldops-text);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   TOTAL DO GRÁFICO
+   ============================================================ */
+
+.chart-total {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.5rem 0.75rem;
+
+    background-color: #f8fafc;
+
+    border-radius: 8px;
+}
+
+
+.chart-total-label {
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.75rem;
+}
+
+
+.chart-total-number {
+
+    color: var(--fieldops-text);
+
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   GRÁFICO DE INSPEÇÕES
+   ============================================================ */
+
+.inspection-chart {
+
+    width: 100%;
+}
+
+
+/*
+   Cada linha representa um status da inspeção.
+*/
+
+.chart-row {
+
+    display: grid;
+
+    grid-template-columns:
+        160px
+        minmax(100px, 1fr)
+        40px;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+
+/* Nome do status */
+
+.chart-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    color: #374151;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+}
+
+
+/* Bolinha da legenda */
+
+.status-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+.status-blue {
+
+    background-color: var(--fieldops-blue);
+}
+
+
+.status-yellow {
+
+    background-color: var(--fieldops-yellow);
+}
+
+
+.status-purple {
+
+    background-color: var(--fieldops-purple);
+}
+
+
+.status-green {
+
+    background-color: var(--fieldops-green);
+}
+
+
+.status-red {
+
+    background-color: var(--fieldops-red);
+}
+
+
+/* Fundo da barra */
+
+.chart-bar-area {
+
+    width: 100%;
+
+    height: 18px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background-color: #eef2f7;
+}
+
+
+/* Barra */
+
+.chart-bar {
+
+    height: 100%;
+
+    min-width: 8px;
+
+    border-radius: 999px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* Cores das barras */
+
+.chart-bar-blue {
+
+    background-color: var(--fieldops-blue);
+}
+
+
+.chart-bar-yellow {
+
+    background-color: var(--fieldops-yellow);
+}
+
+
+.chart-bar-purple {
+
+    background-color: var(--fieldops-purple);
+}
+
+
+.chart-bar-green {
+
+    background-color: var(--fieldops-green);
+}
+
+
+.chart-bar-red {
+
+    background-color: var(--fieldops-red);
+}
+
+
+/* Valor */
+
+.chart-value {
+
+    text-align: right;
+
+    color: var(--fieldops-text);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   RODAPÉ DO GRÁFICO
+   ============================================================ */
+
+.chart-footer {
+
+    padding-top: 1rem;
+
+    border-top:
+        1px solid var(--fieldops-border);
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.75rem;
+}
+
+
+.chart-footer i {
+
+    color: var(--fieldops-primary);
+}
+
+
+/* ============================================================
+   RESUMO LATERAL
+   ============================================================ */
+
+.summary-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    padding: 0.85rem 0;
+
+    border-bottom:
+        1px solid #f1f5f9;
+}
+
+
+.summary-item:last-of-type {
+
+    border-bottom: none;
+}
+
+
+.summary-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 0.9rem;
+}
+
+
+.summary-green {
+
+    color: var(--fieldops-green);
+
+    background-color: #dcfce7;
+}
+
+
+.summary-yellow {
+
+    color: var(--fieldops-yellow);
+
+    background-color: #fef3c7;
+}
+
+
+.summary-purple {
+
+    color: var(--fieldops-purple);
+
+    background-color: #ede9fe;
+}
+
+
+.summary-red {
+
+    color: var(--fieldops-red);
+
+    background-color: #fee2e2;
+}
+
+
+.summary-content {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+.summary-label {
+
+    color: #4b5563;
+
+    font-size: 0.85rem;
+}
+
+
+.summary-number {
+
+    color: var(--fieldops-text);
+
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   ÁREA PARA FUTURAS ISSUES
+   ============================================================ */
+
+.future-section {
+
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    padding: 1.5rem;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: var(--fieldops-radius);
+
+    color: #94a3b8;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.85rem;
+}
+
+
+.future-section i {
+
+    font-size: 1.1rem;
+}
+
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.btn-primary {
+
+    background-color: var(--fieldops-primary);
+
+    border-color: var(--fieldops-primary);
+}
+
+
+.btn-primary:hover {
+
+    background-color: #1d4ed8;
+
+    border-color: #1d4ed8;
+}
+
+
+.btn-outline-primary {
+
+    color: var(--fieldops-primary);
+
+    border-color: #bfdbfe;
+}
+
+
+.btn-outline-primary:hover {
+
+    background-color: var(--fieldops-primary);
+
+    border-color: var(--fieldops-primary);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.fieldops-footer {
+
+    margin-top: 3rem;
+
+    padding: 1.25rem 0;
+
+    border-top:
+        1px solid var(--fieldops-border);
+
+    background-color: #ffffff;
+
+    color: var(--fieldops-muted);
+
+    font-size: 0.75rem;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+
+/* Tablets */
+
+@media (max-width: 991.98px) {
+
+    .supervisor-profile {
+
+        margin-top: 1rem;
+
+        padding: 1rem 0 0;
+
+        border-left: none;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.15);
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 767.98px) {
+
+    .dashboard-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .dashboard-date {
+
+        width: 100%;
+    }
+
+
+    .chart-row {
+
+        grid-template-columns:
+            135px
+            minmax(80px, 1fr)
+            30px;
+
+        gap: 0.6rem;
+    }
+
+
+    .chart-label {
+
+        font-size: 0.75rem;
+    }
+
+
+    .chart-value {
+
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* Celulares pequenos */
+
+@media (max-width: 575.98px) {
+
+    main {
+
+        padding-left: 1rem !important;
+
+        padding-right: 1rem !important;
+    }
+
+
+    .chart-row {
+
+        grid-template-columns: 1fr 35px;
+
+        gap: 0.5rem;
+    }
+
+
+    .chart-label {
+
+        grid-column: 1 / -1;
+    }
+
+
+    .chart-bar-area {
+
+        grid-column: 1;
+    }
+
+
+    .chart-value {
+
+        grid-column: 2;
+
+        grid-row: 2;
+    }
+
+
+    .indicator-number {
+
+        font-size: 1.6rem;
+    }
+
+
+    .dashboard-card .card-body {
+
+        padding: 1.25rem !important;
+    }
+
+}
