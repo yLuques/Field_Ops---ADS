@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field Ops | Inspeções Recentes</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fieldops-navbar">
+
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand d-flex align-items-center gap-2"
+               href="index.html">
+
+                <span class="brand-icon">
+                    <i class="bi bi-clipboard2-check"></i>
+                </span>
+
+                <span>
+                    <strong>Field</strong> Ops
+                </span>
+
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarFieldOps"
+                aria-controls="navbarFieldOps"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarFieldOps">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+
+                            <i class="bi bi-grid-1x2-fill me-1"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="inspecoes-recentes.html">
+
+                            <i class="bi bi-clipboard-data me-1"></i>
+
+                            Inspeções
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">
+
+                            <i class="bi bi-people me-1"></i>
+
+                            Clientes
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">
+
+                            <i class="bi bi-cpu me-1"></i>
+
+                            Equipamentos
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <div class="d-flex align-items-center text-white supervisor-profile">
+
+                    <div class="profile-icon">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+                    <div class="ms-2 d-none d-md-block">
+
+                        <small class="profile-label">
+                            Supervisor
+                        </small>
+
+                        <div class="profile-name">
+                            Administrador
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="container-fluid px-4 py-4">
+
+
+        <!-- Cabeçalho -->
+
+        <section class="dashboard-header mb-4">
+
+            <div>
+
+                <p class="text-uppercase dashboard-subtitle mb-1">
+                    Field Ops
+                </p>
+
+                <h1 class="dashboard-title">
+                    Inspeções recentes
+                </h1>
+
+                <p class="text-muted mb-0">
+                    Acompanhe as inspeções planejadas e realizadas recentemente.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <button class="btn btn-primary">
+
+                    <i class="bi bi-plus-lg me-2"></i>
+
+                    Nova inspeção
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CARD PRINCIPAL
+             ===================================================== -->
+
+        <section class="card dashboard-card">
+
+            <div class="card-body p-4">
+
+
+                <!-- Cabeçalho da tabela -->
+
+                <div class="d-flex flex-column flex-lg-row
+                            justify-content-between
+                            align-items-lg-center
+                            gap-3
+                            mb-4">
+
+
+                    <div>
+
+                        <div class="d-flex align-items-center gap-2 mb-1">
+
+                            <div class="section-icon">
+
+                                <i class="bi bi-clipboard-data"></i>
+
+                            </div>
+
+                            <h2 class="section-title mb-0">
+                                Lista de inspeções
+                            </h2>
+
+                        </div>
+
+                        <p class="text-muted mb-0">
+                            Inspeções registradas no sistema.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Busca visual -->
+
+                    <div class="inspection-search">
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+
+                                <i class="bi bi-search"></i>
+
+                            </span>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Buscar inspeção..."
+                                aria-label="Buscar inspeção"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FILTROS VISUAIS
+                     ================================================= -->
+
+                <div class="row g-3 mb-4">
+
+
+                    <!-- Status -->
+
+                    <div class="col-12 col-md-4">
+
+                        <label
+                            for="filtroStatus"
+                            class="form-label filter-label"
+                        >
+                            Status
+                        </label>
+
+                        <select
+                            id="filtroStatus"
+                            class="form-select"
+                        >
+
+                            <option selected>
+                                Todos os status
+                            </option>
+
+                            <option>
+                                Planejada
+                            </option>
+
+                            <option>
+                                Em andamento
+                            </option>
+
+                            <option>
+                                Aguardando revisão
+                            </option>
+
+                            <option>
+                                Aprovada
+                            </option>
+
+                            <option>
+                                Reprovada
+                            </option>
+
+                            <option>
+                                Cancelada
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Cliente -->
+
+                    <div class="col-12 col-md-4">
+
+                        <label
+                            for="filtroCliente"
+                            class="form-label filter-label"
+                        >
+                            Cliente
+                        </label>
+
+                        <select
+                            id="filtroCliente"
+                            class="form-select"
+                        >
+
+                            <option selected>
+                                Todos os clientes
+                            </option>
+
+                            <option>
+                                Construtora Horizonte
+                            </option>
+
+                            <option>
+                                Indústria Alfa
+                            </option>
+
+                            <option>
+                                Metalúrgica São Paulo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Técnico -->
+
+                    <div class="col-12 col-md-4">
+
+                        <label
+                            for="filtroTecnico"
+                            class="form-label filter-label"
+                        >
+                            Técnico
+                        </label>
+
+                        <select
+                            id="filtroTecnico"
+                            class="form-select"
+                        >
+
+                            <option selected>
+                                Todos os técnicos
+                            </option>
+
+                            <option>
+                                Lucas Almeida
+                            </option>
+
+                            <option>
+                                Mariana Costa
+                            </option>
+
+                            <option>
+                                Rafael Santos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TABELA
+                     ================================================= -->
+
+                <div class="table-responsive">
+
+                    <table class="table align-middle inspection-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">
+                                    Código
+                                </th>
+
+                                <th scope="col">
+                                    Cliente
+                                </th>
+
+                                <th scope="col">
+                                    Equipamento
+                                </th>
+
+                                <th scope="col">
+                                    Técnico
+                                </th>
+
+                                <th scope="col">
+                                    Data
+                                </th>
+
+                                <th scope="col">
+                                    Prioridade
+                                </th>
+
+                                <th scope="col">
+                                    Status
+                                </th>
+
+                                <th scope="col" class="text-end">
+                                    Ação
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- =====================================
+                                 INSPEÇÃO 01
+                                 ===================================== -->
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="inspection-code">
+                                        INS-2026-001
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Construtora Horizonte
+                                    </div>
+
+                                    <small class="table-secondary-text">
+                                        Unidade Guarulhos
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Compressor CP-204
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="technician-cell">
+
+                                        <div class="technician-avatar">
+                                            LA
+                                        </div>
+
+                                        <span>
+                                            Lucas Almeida
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    25/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge priority-high">
+                                        Alta
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge status-badge status-review">
+
+                                        <i class="bi bi-eye me-1"></i>
+
+                                        Aguardando revisão
+
+                                    </span>
+
+                                </td>
+
+
+                                <td class="text-end">
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary"
+                                        title="Visualizar inspeção"
+                                    >
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- =====================================
+                                 INSPEÇÃO 02
+                                 ===================================== -->
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="inspection-code">
+                                        INS-2026-002
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Indústria Alfa
+                                    </div>
+
+                                    <small class="table-secondary-text">
+                                        Planta Industrial A
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Caldeira CL-101
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="technician-cell">
+
+                                        <div class="technician-avatar avatar-purple">
+                                            MC
+                                        </div>
+
+                                        <span>
+                                            Mariana Costa
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    24/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge priority-medium">
+                                        Média
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge status-badge status-approved">
+
+                                        <i class="bi bi-check-circle me-1"></i>
+
+                                        Aprovada
+
+                                    </span>
+
+                                </td>
+
+
+                                <td class="text-end">
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary"
+                                        title="Visualizar inspeção"
+                                    >
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- =====================================
+                                 INSPEÇÃO 03
+                                 ===================================== -->
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="inspection-code">
+                                        INS-2026-003
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Metalúrgica São Paulo
+                                    </div>
+
+                                    <small class="table-secondary-text">
+                                        Centro Logístico
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Esteira ET-305
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="technician-cell">
+
+                                        <div class="technician-avatar avatar-green">
+                                            RS
+                                        </div>
+
+                                        <span>
+                                            Rafael Santos
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    23/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge priority-high">
+                                        Alta
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge status-badge status-progress">
+
+                                        <i class="bi bi-arrow-repeat me-1"></i>
+
+                                        Em andamento
+
+                                    </span>
+
+                                </td>
+
+
+                                <td class="text-end">
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary"
+                                        title="Visualizar inspeção"
+                                    >
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- =====================================
+                                 INSPEÇÃO 04
+                                 ===================================== -->
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="inspection-code">
+                                        INS-2026-004
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Construtora Horizonte
+                                    </div>
+
+                                    <small class="table-secondary-text">
+                                        Planta Norte
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Gerador GE-110
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="technician-cell">
+
+                                        <div class="technician-avatar">
+                                            LA
+                                        </div>
+
+                                        <span>
+                                            Lucas Almeida
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    22/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge priority-low">
+                                        Baixa
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge status-badge status-planned">
+
+                                        <i class="bi bi-calendar-check me-1"></i>
+
+                                        Planejada
+
+                                    </span>
+
+                                </td>
+
+
+                                <td class="text-end">
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary"
+                                        title="Visualizar inspeção"
+                                    >
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- =====================================
+                                 INSPEÇÃO 05
+                                 ===================================== -->
+
+                            <tr>
+
+                                <td>
+
+                                    <span class="inspection-code">
+                                        INS-2026-005
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Indústria Alfa
+                                    </div>
+
+                                    <small class="table-secondary-text">
+                                        Unidade Campinas
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="table-primary-text">
+                                        Bomba BM-205
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="technician-cell">
+
+                                        <div class="technician-avatar avatar-purple">
+                                            MC
+                                        </div>
+
+                                        <span>
+                                            Mariana Costa
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    20/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge priority-medium">
+                                        Média
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="badge status-badge status-rejected">
+
+                                        <i class="bi bi-x-circle me-1"></i>
+
+                                        Reprovada
+
+                                    </span>
+
+                                </td>
+
+
+                                <td class="text-end">
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary"
+                                        title="Visualizar inspeção"
+                                    >
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RODAPÉ DA TABELA
+                     ================================================= -->
+
+                <div class="d-flex flex-column flex-md-row
+                            justify-content-between
+                            align-items-center
+                            gap-3
+                            mt-3">
+
+
+                    <small class="text-muted">
+
+                        Exibindo
+                        <strong>5</strong>
+                        inspeções recentes
+
+                    </small>
+
+
+                    <!-- Paginação visual -->
+
+                    <nav aria-label="Paginação das inspeções">
+
+                        <ul class="pagination pagination-sm mb-0">
+
+                            <li class="page-item disabled">
+
+                                <a class="page-link" href="#">
+                                    Anterior
+                                </a>
+
+                            </li>
+
+
+                            <li class="page-item active">
+
+                                <a class="page-link" href="#">
+                                    1
+                                </a>
+
+                            </li>
+
+
+                            <li class="page-item">
+
+                                <a class="page-link" href="#">
+                                    2
+                                </a>
+
+                            </li>
+
+
+                            <li class="page-item">
+
+                                <a class="page-link" href="#">
+                                    Próximo
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OBSERVAÇÃO
+             ===================================================== -->
+
+        <div class="alert alert-info mt-4" role="alert">
+
+            <i class="bi bi-info-circle me-2"></i>
+
+            Os dados apresentados são fictícios e fazem parte
+            do protótipo visual do Field Ops.
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="fieldops-footer">
+
+        <div class="container-fluid px-4">
+
+            <div class="d-flex
+                        flex-column
+                        flex-md-row
+                        justify-content-between
+                        align-items-center
+                        gap-2">
+
+                <span>
+                    © 2026 Field Ops
+                </span>
+
+                <span>
+                    Painel do Supervisor
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS
+         Necessário apenas para componentes do Bootstrap,
+         como o menu responsivo.
+    -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

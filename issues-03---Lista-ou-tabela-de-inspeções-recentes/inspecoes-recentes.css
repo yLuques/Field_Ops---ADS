@@ -1,0 +1,379 @@
+/* ============================================================
+   ISSUE #03
+   LISTA DE INSPEÇÕES RECENTES
+   ============================================================ */
+
+
+/* ============================================================
+   BUSCA
+   ============================================================ */
+
+.inspection-search {
+
+    width: 100%;
+
+    max-width: 320px;
+}
+
+
+.inspection-search .input-group-text {
+
+    background-color: #ffffff;
+
+    border-color: #dbe1ea;
+
+    color: #64748b;
+}
+
+
+.inspection-search .form-control {
+
+    border-color: #dbe1ea;
+
+    box-shadow: none;
+}
+
+
+.inspection-search .form-control:focus {
+
+    border-color: var(--fieldops-primary);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(37, 99, 235, 0.1);
+}
+
+
+/* ============================================================
+   FILTROS
+   ============================================================ */
+
+.filter-label {
+
+    margin-bottom: 0.4rem;
+
+    color: #475569;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+
+.form-select {
+
+    border-color: #dbe1ea;
+
+    color: #334155;
+
+    font-size: 0.85rem;
+
+    box-shadow: none;
+}
+
+
+.form-select:focus {
+
+    border-color: var(--fieldops-primary);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(37, 99, 235, 0.1);
+}
+
+
+/* ============================================================
+   TABELA
+   ============================================================ */
+
+.inspection-table {
+
+    margin-bottom: 0;
+
+    min-width: 1050px;
+}
+
+
+.inspection-table thead th {
+
+    padding: 0.9rem 0.75rem;
+
+    background-color: #f8fafc;
+
+    border-bottom:
+        1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.03em;
+
+    white-space: nowrap;
+}
+
+
+.inspection-table tbody td {
+
+    padding: 1rem 0.75rem;
+
+    border-bottom:
+        1px solid #eef2f7;
+
+    color: #475569;
+
+    font-size: 0.82rem;
+
+    white-space: nowrap;
+}
+
+
+.inspection-table tbody tr {
+
+    transition:
+        background-color 0.15s ease;
+}
+
+
+.inspection-table tbody tr:hover {
+
+    background-color: #f8fafc;
+}
+
+
+.inspection-table tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+/* ============================================================
+   CÓDIGO DA INSPEÇÃO
+   ============================================================ */
+
+.inspection-code {
+
+    color: var(--fieldops-primary);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   TEXTOS DA TABELA
+   ============================================================ */
+
+.table-primary-text {
+
+    color: #1e293b;
+
+    font-weight: 600;
+}
+
+
+.table-secondary-text {
+
+    display: block;
+
+    margin-top: 0.15rem;
+
+    color: #94a3b8;
+
+    font-size: 0.72rem;
+}
+
+
+/* ============================================================
+   TÉCNICO
+   ============================================================ */
+
+.technician-cell {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.55rem;
+}
+
+
+.technician-avatar {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+}
+
+
+.avatar-purple {
+
+    background-color: #ede9fe;
+
+    color: #6d28d9;
+}
+
+
+.avatar-green {
+
+    background-color: #dcfce7;
+
+    color: #15803d;
+}
+
+
+/* ============================================================
+   BADGES DE PRIORIDADE
+   ============================================================ */
+
+.priority-high {
+
+    color: #b91c1c;
+
+    background-color: #fee2e2;
+
+    font-weight: 600;
+}
+
+
+.priority-medium {
+
+    color: #a16207;
+
+    background-color: #fef3c7;
+
+    font-weight: 600;
+}
+
+
+.priority-low {
+
+    color: #166534;
+
+    background-color: #dcfce7;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   BADGES DE STATUS
+   ============================================================ */
+
+.status-badge {
+
+    padding: 0.45rem 0.65rem;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+}
+
+
+.status-planned {
+
+    color: #1d4ed8;
+
+    background-color: #dbeafe;
+}
+
+
+.status-progress {
+
+    color: #a16207;
+
+    background-color: #fef3c7;
+}
+
+
+.status-review {
+
+    color: #6d28d9;
+
+    background-color: #ede9fe;
+}
+
+
+.status-approved {
+
+    color: #15803d;
+
+    background-color: #dcfce7;
+}
+
+
+.status-rejected {
+
+    color: #b91c1c;
+
+    background-color: #fee2e2;
+}
+
+
+/* ============================================================
+   PAGINAÇÃO
+   ============================================================ */
+
+.pagination .page-link {
+
+    color: var(--fieldops-primary);
+
+    border-color: #dbe1ea;
+
+    font-size: 0.75rem;
+}
+
+
+.pagination .page-link:hover {
+
+    color: #1d4ed8;
+
+    background-color: #eff6ff;
+}
+
+
+.pagination .page-item.active .page-link {
+
+    color: #ffffff;
+
+    background-color: var(--fieldops-primary);
+
+    border-color: var(--fieldops-primary);
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 767.98px) {
+
+    .inspection-search {
+
+        max-width: 100%;
+    }
+
+}
