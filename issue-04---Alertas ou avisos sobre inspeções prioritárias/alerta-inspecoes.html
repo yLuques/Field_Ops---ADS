@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field Ops | Alertas</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS próprio do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fieldops-navbar">
+
+        <div class="container-fluid px-4">
+
+
+            <!-- Logo -->
+
+            <a
+                class="navbar-brand d-flex align-items-center gap-2"
+                href="index.html"
+            >
+
+                <span class="brand-icon">
+
+                    <i class="bi bi-clipboard2-check"></i>
+
+                </span>
+
+                <span>
+
+                    <strong>Field</strong> Ops
+
+                </span>
+
+            </a>
+
+
+            <!-- Botão mobile -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarFieldOps"
+                aria-controls="navbarFieldOps"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarFieldOps"
+            >
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
+
+                            <i class="bi bi-grid-1x2-fill me-1"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="inspecoes-recentes.html"
+                        >
+
+                            <i class="bi bi-clipboard-data me-1"></i>
+
+                            Inspeções
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="alertas-inspecoes.html"
+                        >
+
+                            <i class="bi bi-bell me-1"></i>
+
+                            Alertas
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#"
+                        >
+
+                            <i class="bi bi-people me-1"></i>
+
+                            Clientes
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#"
+                        >
+
+                            <i class="bi bi-cpu me-1"></i>
+
+                            Equipamentos
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+                <!-- Perfil -->
+
+                <div
+                    class="d-flex align-items-center text-white supervisor-profile"
+                >
+
+                    <div class="profile-icon">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+
+                    <div class="ms-2 d-none d-md-block">
+
+                        <small class="profile-label">
+                            Supervisor
+                        </small>
+
+                        <div class="profile-name">
+                            Administrador
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="container-fluid px-4 py-4">
+
+
+        <!-- =================================================
+             CABEÇALHO
+             ================================================= -->
+
+        <section class="dashboard-header mb-4">
+
+            <div>
+
+                <p class="text-uppercase dashboard-subtitle mb-1">
+                    Field Ops
+                </p>
+
+                <h1 class="dashboard-title">
+                    Alertas e avisos
+                </h1>
+
+                <p class="text-muted mb-0">
+                    Acompanhe situações que exigem atenção do supervisor.
+                </p>
+
+            </div>
+
+
+            <div class="alert-summary">
+
+                <i class="bi bi-bell-fill me-2"></i>
+
+                <strong>4</strong>
+
+                alertas ativos
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CARD PRINCIPAL
+             ================================================= -->
+
+        <section class="card dashboard-card">
+
+            <div class="card-body p-4">
+
+
+                <!-- Cabeçalho -->
+
+                <div class="d-flex
+                            flex-column
+                            flex-md-row
+                            justify-content-between
+                            align-items-md-center
+                            gap-3
+                            mb-4">
+
+
+                    <div>
+
+                        <div class="d-flex align-items-center gap-2 mb-1">
+
+                            <div class="section-icon alert-section-icon">
+
+                                <i class="bi bi-exclamation-triangle-fill"></i>
+
+                            </div>
+
+                            <h2 class="section-title mb-0">
+                                Inspeções prioritárias
+                            </h2>
+
+                        </div>
+
+                        <p class="text-muted mb-0">
+                            Situações que precisam da atenção do supervisor.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Filtro visual -->
+
+                    <div>
+
+                        <select
+                            class="form-select"
+                            aria-label="Filtrar alertas"
+                        >
+
+                            <option selected>
+                                Todos os alertas
+                            </option>
+
+                            <option>
+                                Alta prioridade
+                            </option>
+
+                            <option>
+                                Aguardando revisão
+                            </option>
+
+                            <option>
+                                Não conformidade
+                            </option>
+
+                            <option>
+                                Prazo próximo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALERTA 01 — ALTA PRIORIDADE
+                     ================================================= -->
+
+                <div
+                    class="alert priority-alert priority-alert-danger"
+                    role="alert"
+                >
+
+                    <div class="alert-content">
+
+
+                        <div class="alert-icon">
+
+                            <i class="bi bi-exclamation-octagon-fill"></i>
+
+                        </div>
+
+
+                        <div class="alert-main">
+
+                            <div class="alert-header">
+
+                                <h3 class="alert-title">
+                                    Inspeção de alta prioridade
+                                </h3>
+
+                                <span class="badge alert-badge-danger">
+                                    Alta prioridade
+                                </span>
+
+                            </div>
+
+
+                            <p class="alert-description">
+
+                                A inspeção
+                                <strong>INS-2026-001</strong>,
+                                referente ao
+                                <strong>Compressor CP-204</strong>,
+                                possui prioridade alta e está aguardando
+                                revisão do supervisor.
+
+                            </p>
+
+
+                            <div class="alert-details">
+
+                                <span>
+
+                                    <i class="bi bi-building me-1"></i>
+
+                                    Construtora Horizonte
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-person me-1"></i>
+
+                                    Lucas Almeida
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3 me-1"></i>
+
+                                    25/09/2026
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-action">
+
+                            <button
+                                class="btn btn-sm btn-danger"
+                            >
+
+                                <i class="bi bi-eye me-1"></i>
+
+                                Revisar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALERTA 02 — PRAZO PRÓXIMO
+                     ================================================= -->
+
+                <div
+                    class="alert priority-alert priority-alert-warning"
+                    role="alert"
+                >
+
+                    <div class="alert-content">
+
+
+                        <div class="alert-icon">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                        </div>
+
+
+                        <div class="alert-main">
+
+                            <div class="alert-header">
+
+                                <h3 class="alert-title">
+                                    Inspeção próxima do prazo
+                                </h3>
+
+                                <span class="badge alert-badge-warning">
+                                    Atenção
+                                </span>
+
+                            </div>
+
+
+                            <p class="alert-description">
+
+                                A inspeção
+                                <strong>INS-2026-003</strong>,
+                                do equipamento
+                                <strong>Esteira ET-305</strong>,
+                                está programada para execução próxima
+                                ao prazo definido.
+
+                            </p>
+
+
+                            <div class="alert-details">
+
+                                <span>
+
+                                    <i class="bi bi-building me-1"></i>
+
+                                    Metalúrgica São Paulo
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-person me-1"></i>
+
+                                    Rafael Santos
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3 me-1"></i>
+
+                                    23/09/2026
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-action">
+
+                            <button
+                                class="btn btn-sm btn-warning"
+                            >
+
+                                <i class="bi bi-eye me-1"></i>
+
+                                Visualizar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALERTA 03 — NÃO CONFORMIDADE
+                     ================================================= -->
+
+                <div
+                    class="alert priority-alert priority-alert-danger"
+                    role="alert"
+                >
+
+                    <div class="alert-content">
+
+
+                        <div class="alert-icon">
+
+                            <i class="bi bi-shield-exclamation"></i>
+
+                        </div>
+
+
+                        <div class="alert-main">
+
+                            <div class="alert-header">
+
+                                <h3 class="alert-title">
+                                    Não conformidade identificada
+                                </h3>
+
+                                <span class="badge alert-badge-danger">
+                                    Requer atenção
+                                </span>
+
+                            </div>
+
+
+                            <p class="alert-description">
+
+                                A inspeção
+                                <strong>INS-2026-005</strong>
+                                apresentou uma ou mais
+                                <strong>não conformidades</strong>
+                                durante a execução.
+
+                            </p>
+
+
+                            <div class="alert-details">
+
+                                <span>
+
+                                    <i class="bi bi-building me-1"></i>
+
+                                    Indústria Alfa
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-cpu me-1"></i>
+
+                                    Bomba BM-205
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3 me-1"></i>
+
+                                    20/09/2026
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-action">
+
+                            <button
+                                class="btn btn-sm btn-danger"
+                            >
+
+                                <i class="bi bi-search me-1"></i>
+
+                                Analisar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALERTA 04 — AGUARDANDO REVISÃO
+                     ================================================= -->
+
+                <div
+                    class="alert priority-alert priority-alert-info"
+                    role="alert"
+                >
+
+                    <div class="alert-content">
+
+
+                        <div class="alert-icon">
+
+                            <i class="bi bi-eye-fill"></i>
+
+                        </div>
+
+
+                        <div class="alert-main">
+
+                            <div class="alert-header">
+
+                                <h3 class="alert-title">
+                                    Resultado aguardando revisão
+                                </h3>
+
+                                <span class="badge alert-badge-info">
+                                    Revisão pendente
+                                </span>
+
+                            </div>
+
+
+                            <p class="alert-description">
+
+                                A inspeção
+                                <strong>INS-2026-002</strong>
+                                foi concluída e está aguardando
+                                análise e aprovação do supervisor.
+
+                            </p>
+
+
+                            <div class="alert-details">
+
+                                <span>
+
+                                    <i class="bi bi-building me-1"></i>
+
+                                    Indústria Alfa
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-person me-1"></i>
+
+                                    Mariana Costa
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3 me-1"></i>
+
+                                    24/09/2026
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="alert-action">
+
+                            <button
+                                class="btn btn-sm btn-primary"
+                            >
+
+                                <i class="bi bi-eye me-1"></i>
+
+                                Revisar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SEM OUTROS ALERTAS
+                     ================================================= -->
+
+                <div class="alert-empty">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Todos os alertas prioritários foram listados.
+                        </strong>
+
+                        <p class="mb-0">
+                            Continue acompanhando o painel para novas ocorrências.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESUMO DOS ALERTAS
+             ================================================= -->
+
+        <section class="row g-4 mt-1">
+
+
+            <!-- Alta prioridade -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card alert-summary-card">
+
+                    <div class="card-body">
+
+                        <div class="alert-summary-card-icon alert-summary-red">
+
+                            <i class="bi bi-exclamation-octagon"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span class="summary-label">
+                                Alta prioridade
+                            </span>
+
+                            <strong class="summary-number">
+                                2
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Revisões -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card alert-summary-card">
+
+                    <div class="card-body">
+
+                        <div class="alert-summary-card-icon alert-summary-purple">
+
+                            <i class="bi bi-eye"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span class="summary-label">
+                                Revisões pendentes
+                            </span>
+
+                            <strong class="summary-number">
+                                2
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Não conformidades -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card alert-summary-card">
+
+                    <div class="card-body">
+
+                        <div class="alert-summary-card-icon alert-summary-yellow">
+
+                            <i class="bi bi-shield-exclamation"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span class="summary-label">
+                                Não conformidades
+                            </span>
+
+                            <strong class="summary-number">
+                                1
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="fieldops-footer">
+
+        <div class="container-fluid px-4">
+
+            <div
+                class="d-flex
+                       flex-column
+                       flex-md-row
+                       justify-content-between
+                       align-items-center
+                       gap-2"
+            >
+
+                <span>
+                    © 2026 Field Ops
+                </span>
+
+                <span>
+                    Painel do Supervisor
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
