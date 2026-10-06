@@ -1,0 +1,1139 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_blank" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#fffbff",
+              "primary-container": "#007bb9",
+              "tertiary-fixed-dim": "#ffb95f",
+              "on-secondary-fixed": "#111c2d",
+              "tertiary-fixed": "#ffddb8",
+              "surface-container-low": "#eff4ff",
+              "on-background": "#0b1c30",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              secondary: "#545f73",
+              "secondary-fixed-dim": "#bcc7de",
+              "surface-container-high": "#dce9ff",
+              outline: "#707881",
+              "on-tertiary-fixed": "#2a1700",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#d3e4fe",
+              "on-primary-fixed-variant": "#004b73",
+              "secondary-container": "#d5e0f8",
+              "inverse-on-surface": "#eaf1ff",
+              "surface-dim": "#cbdbf5",
+              "inverse-surface": "#213145",
+              "surface-container-highest": "#d3e4fe",
+              "secondary-fixed": "#d8e3fb",
+              "on-surface": "#0b1c30",
+              "surface-container": "#e5eeff",
+              "on-secondary-container": "#586377",
+              "primary-fixed-dim": "#93ccff",
+              tertiary: "#825100",
+              surface: "#f8f9ff",
+              "on-primary-container": "#fdfcff",
+              "outline-variant": "#bfc7d2",
+              primary: "#006194",
+              "surface-bright": "#f8f9ff",
+              "primary-fixed": "#cce5ff",
+              "on-tertiary-fixed-variant": "#653e00",
+              "on-primary-fixed": "#001d31",
+              "surface-tint": "#006398",
+              "on-surface-variant": "#3f4850",
+              background: "#f8f9ff",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#a36700",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#3c475a",
+              "on-tertiary": "#ffffff",
+              error: "#ba1a1a",
+              "inverse-primary": "#93ccff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "1.5rem",
+              "space-md": "1rem",
+              margin: "1.5rem",
+              "space-xs": "0.25rem",
+              "space-lg": "1.5rem",
+              "space-2xl": "3rem",
+              "space-sm": "0.5rem",
+              "gutter-lg": "2rem",
+              "space-xl": "2rem",
+              "margin-desktop": "2rem",
+              "margin-mobile": "1rem",
+              "gutter-sm": "0.75rem",
+            },
+            fontFamily: {
+              "body-sm": ["Inter"],
+              "body-md": ["Inter"],
+              "headline-sm": ["Inter"],
+              "code-sm": ["Inter"],
+              "headline-lg-mobile": ["Inter"],
+              "label-md": ["Inter"],
+              "label-sm": ["Inter"],
+              "title-md": ["Inter"],
+              "headline-md": ["Inter"],
+              "headline-lg": ["Inter"],
+              "display-lg": ["Inter"],
+              "body-lg": ["Inter"],
+            },
+            fontSize: {
+              "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+              "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "code-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+              "headline-lg-mobile": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "30px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-lg": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-on-surface min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="absolute -top-[25%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-surface-container-high/40 blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-[20%] -right-[10%] w-[45vw] h-[45vw] rounded-full bg-primary-fixed/20 blur-3xl"
+      ></div>
+      <span
+        class="material-symbols-outlined text-[360px] text-surface-container-highest/20 select-none absolute select-none"
+        >verified_user</span
+      >
+    </div>
+    <header
+      class="relative z-10 w-full pt-space-xl px-margin-mobile md:px-margin-desktop flex items-center justify-between"
+    >
+      <div class="flex items-center gap-space-sm">
+        <div
+          class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+        >
+          <span class="material-symbols-outlined text-on-primary text-[20px]"
+            >security</span
+          >
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-title-md text-title-md text-on-surface tracking-tight leading-none"
+            >FIELD OPS</span
+          ><span
+            class="font-label-sm text-label-sm text-secondary tracking-widest uppercase mt-0.5"
+            >Inspection Gateway</span
+          >
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest/80 shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] border border-outline-variant/30"
+      >
+        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+        <span
+          class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+          >Operational Node #04</span
+        >
+      </div>
+    </header>
+    <main
+      class="relative z-10 w-full flex items-center justify-center px-margin-mobile py-space-xl min-h-[calc(100vh-140px)]"
+    >
+      <div class="flex flex-col w-full max-w-6xl mx-auto my-auto py-space-md">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 rounded-xl shadow-xl overflow-hidden bg-surface-container-lowest"
+        >
+          <!-- LADO ESQUERDO: Painel Tático & Storytelling Industrial -->
+          <div
+            class="lg:col-span-5 relative flex flex-col justify-between p-space-lg lg:p-space-xl bg-gradient-to-br from-primary to-inverse-surface text-on-primary overflow-hidden"
+          >
+            <!-- Ambient Visual Background Accent -->
+            <div
+              class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="absolute top-0 right-0 w-48 h-48 bg-primary-fixed-dim/10 rounded-full blur-2xl pointer-events-none"
+            ></div>
+            <!-- Top Header / Identity Area -->
+            <div class="relative z-10 flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 backdrop-blur-md flex items-center justify-center text-primary-fixed shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-[24px]"
+                      >assignment_turned_in</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-headline-sm text-headline-sm tracking-tight text-on-primary block leading-tight"
+                      >FIELD OPS</span
+                    >
+                    <span
+                      class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider"
+                      >Supervisão Técnica Integrada</span
+                    >
+                  </div>
+                </div>
+                <span
+                  class="px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-semibold flex items-center gap-1 shadow-sm"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"
+                  ></span>
+                  v2.4-PRO
+                </span>
+              </div>
+              <div class="pt-space-md">
+                <span
+                  class="font-label-md text-label-md text-primary-fixed tracking-widest uppercase"
+                  >Console Operacional Unificado</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg font-bold text-on-primary mt-1 tracking-tight leading-snug"
+                >
+                  Gestão e Supervisão de Inspeções em Campo
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-surface-variant/90 mt-space-xs"
+                >
+                  Rastreabilidade ponta a ponta, auditoria contínua de ordens de
+                  serviço e conformidade normativa em tempo real.
+                </p>
+              </div>
+              <!-- Pillars / Feature Badges -->
+              <div class="space-y-space-sm pt-space-xs">
+                <div
+                  class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-md"
+                >
+                  <div
+                    class="w-7 h-7 rounded bg-primary-container/40 flex items-center justify-center shrink-0 mt-0.5 text-primary-fixed"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >radar</span
+                    >
+                  </div>
+                  <div>
+                    <div
+                      class="font-title-md text-title-md text-on-primary leading-tight"
+                    >
+                      Supervisão em Tempo Real
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-surface-container-low/80"
+                    >
+                      Despacho dinâmico e rastreio de telemetria via nó
+                      operacional ativo.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-md"
+                >
+                  <div
+                    class="w-7 h-7 rounded bg-primary-container/40 flex items-center justify-center shrink-0 mt-0.5 text-primary-fixed"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >verified</span
+                    >
+                  </div>
+                  <div>
+                    <div
+                      class="font-title-md text-title-md text-on-primary leading-tight"
+                    >
+                      Homologação Técnica NR-10 / 13 / 35
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-surface-container-low/80"
+                    >
+                      Checklists inteligentes com validação de APR e ART
+                      homologada.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-md"
+                >
+                  <div
+                    class="w-7 h-7 rounded bg-primary-container/40 flex items-center justify-center shrink-0 mt-0.5 text-primary-fixed"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >sync_saved_locally</span
+                    >
+                  </div>
+                  <div>
+                    <div
+                      class="font-title-md text-title-md text-on-primary leading-tight"
+                    >
+                      Sincronização Segura Offline-First
+                    </div>
+                    <div
+                      class="font-body-sm text-body-sm text-surface-container-low/80"
+                    >
+                      Buffer criptográfico local com push automático de
+                      evidências fotográficas.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Trust Seal & Industrial Image Snippet -->
+            <div class="relative z-10 pt-space-lg">
+              <div
+                class="relative h-28 w-full rounded-lg overflow-hidden shadow-md mb-space-sm"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="High tech industrial plant control room with field engineers analyzing real time telemetry and schematics on rugged digital tablets under focused cinematic lighting with deep blues and crisp highlights."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn5Z2wBl-rMgks0dbMsTLSrmTKbzqDNsx6Nzvw7aQbtyK2w2DUo_EKjSD-vBK0Vbx5N1cZmsApL85krWR53JMWFnoQBk8_WtW_sG7PAlDTTxe7Kb0saR59s1qwHH2itb4_8_YKufBiYRynfpnqUufDnPmks91gjnWgPoaKUbgwatU8Jhyt5vkXBWQ7EzZo4d4Nfin4BLJe_BpUMEPwNFtJI2ET4pO3dL5meRWbjFaP7elPqpshz4kGcw"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent flex items-end p-space-sm"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-fixed"
+                      >shield_lock</span
+                    >
+                    <span
+                      class="font-code-sm text-code-sm text-on-primary tracking-wide"
+                      >SHA-256 HSM • PROTOCOLO LGPD INDUSTRIAL</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between text-surface-variant font-label-sm text-label-sm"
+              >
+                <span>Planta Operacional Conectada</span>
+                <span
+                  class="flex items-center gap-1 font-semibold text-primary-fixed"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >cell_tower</span
+                  >
+                  99.98% Telemetria OK
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- LADO DIREITO: Card Interativo de Autenticação / Cadastro -->
+          <div
+            class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between bg-surface-container-lowest"
+          >
+            <!-- Segmented Tab Switcher (Modern Pill Style) -->
+            <div>
+              <div
+                class="flex p-1 rounded-xl bg-surface-container-low max-w-md mx-auto mb-space-lg shadow-sm"
+              >
+                <button
+                  class="flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-on-primary bg-primary shadow-sm flex items-center justify-center gap-1.5 cursor-pointer"
+                  id="tab-btn-login"
+                  onclick="switchAuthTab('login')"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >login</span
+                  >
+                  Entrar na Conta
+                </button>
+                <button
+                  class="flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-secondary hover:text-on-surface bg-transparent flex items-center justify-center gap-1.5 cursor-pointer"
+                  id="tab-btn-register"
+                  onclick="switchAuthTab('register')"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >how_to_reg</span
+                  >
+                  Solicitar Cadastro
+                </button>
+              </div>
+              <!-- ======================= ABA LOGIN ======================= -->
+              <div class="transition-opacity duration-300" id="view-login">
+                <div class="mb-space-lg">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm mb-space-xs"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >shield</span
+                    >
+                    Canal Operacional Seguro
+                  </div>
+                  <h1
+                    class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight"
+                  >
+                    Acesso ao Painel do Supervisor
+                  </h1>
+                  <p class="font-body-md text-body-md text-secondary mt-0.5">
+                    Insira suas credenciais corporativas para gerenciar
+                    operações em campo.
+                  </p>
+                </div>
+                <form
+                  class="space-y-space-md"
+                  onsubmit="handleAuthSubmit(event, 'login')"
+                >
+                  <!-- Seletor de Perfil de Acesso -->
+                  <div>
+                    <label
+                      class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                      >Perfil Operacional</label
+                    >
+                    <div class="grid grid-cols-3 gap-2">
+                      <label
+                        class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed transition-all"
+                      >
+                        <input
+                          checked=""
+                          class="sr-only"
+                          name="profile_role"
+                          type="radio"
+                          value="supervisor"
+                        />
+                        <span class="material-symbols-outlined text-[20px] mb-1"
+                          >manage_accounts</span
+                        >
+                        <span
+                          class="font-label-sm text-label-sm text-center leading-tight"
+                          >Supervisor de Operações</span
+                        >
+                      </label>
+                      <label
+                        class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed transition-all"
+                      >
+                        <input
+                          class="sr-only"
+                          name="profile_role"
+                          type="radio"
+                          value="inspector"
+                        />
+                        <span class="material-symbols-outlined text-[20px] mb-1"
+                          >engineering</span
+                        >
+                        <span
+                          class="font-label-sm text-label-sm text-center leading-tight"
+                          >Inspetor / Técnico</span
+                        >
+                      </label>
+                      <label
+                        class="flex flex-col items-center justify-center p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed transition-all"
+                      >
+                        <input
+                          class="sr-only"
+                          name="profile_role"
+                          type="radio"
+                          value="manager"
+                        />
+                        <span class="material-symbols-outlined text-[20px] mb-1"
+                          >domain_verification</span
+                        >
+                        <span
+                          class="font-label-sm text-label-sm text-center leading-tight"
+                          >Gestor de Contrato</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <!-- E-mail Corporativo ou CREA/ID -->
+                  <div>
+                    <label
+                      class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                      for="login-identifier"
+                    >
+                      E-mail Corporativo ou CREA / CFT
+                    </label>
+                    <div class="relative flex items-center">
+                      <div
+                        class="absolute left-3 flex items-center pointer-events-none text-secondary"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >badge</span
+                        >
+                      </div>
+                      <input
+                        class="w-full pl-10 pr-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low transition-all"
+                        id="login-identifier"
+                        placeholder="ex: supervisor.silva@petrobras.com.br ou CREA-12849"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <!-- Senha com Alternância Visível -->
+                  <div>
+                    <div class="flex items-center justify-between mb-space-xs">
+                      <label
+                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider"
+                        for="login-password"
+                        >Chave de Acesso / Senha</label
+                      >
+                      <a
+                        class="font-label-sm text-label-sm text-primary hover:text-primary-container font-medium hover:underline"
+                        href="javascript:void(0)"
+                        onclick="
+                          alert(
+                            'Instruções de redefinição seguras enviadas ao administrador da sua unidade operacional.',
+                          )
+                        "
+                      >
+                        Esqueceu a chave?
+                      </a>
+                    </div>
+                    <div class="relative flex items-center">
+                      <div
+                        class="absolute left-3 flex items-center pointer-events-none text-secondary"
+                      >
+                        <span class="material-symbols-outlined text-[20px]"
+                          >key</span
+                        >
+                      </div>
+                      <input
+                        class="w-full pl-10 pr-10 py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low transition-all"
+                        id="login-password"
+                        placeholder="••••••••••••"
+                        required=""
+                        type="password"
+                      />
+                      <button
+                        class="absolute right-3 text-secondary hover:text-on-surface focus:outline-none cursor-pointer"
+                        onclick="
+                          togglePasswordVisibility(
+                            'login-password',
+                            'pwd-toggle-icon',
+                          )
+                        "
+                        title="Exibir/Ocultar Senha"
+                        type="button"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[20px]"
+                          id="pwd-toggle-icon"
+                          >visibility</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Lembrar Conexão -->
+                  <div class="flex items-center justify-between pt-1">
+                    <label
+                      class="flex items-center gap-2 cursor-pointer select-none"
+                    >
+                      <input
+                        class="w-4 h-4 rounded text-primary accent-primary cursor-pointer"
+                        id="remember-terminal"
+                        type="checkbox"
+                      />
+                      <span class="font-body-sm text-body-sm text-secondary"
+                        >Manter conectado neste terminal operacional</span
+                      >
+                    </label>
+                    <span
+                      class="font-code-sm text-code-sm text-outline flex items-center gap-1"
+                    >
+                      <span
+                        class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"
+                      ></span>
+                      IP 10.244.x.x
+                    </span>
+                  </div>
+                  <!-- Botão Principal de Login -->
+                  <button
+                    class="w-full py-space-sm px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer mt-space-md"
+                    type="submit"
+                  >
+                    <span>Acessar Plataforma Field Ops</span>
+                    <span class="material-symbols-outlined text-[20px]"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </form>
+                <!-- Divisor SSO -->
+                <div
+                  class="relative my-space-lg flex items-center justify-center"
+                >
+                  <div class="w-full h-px bg-surface-container-high"></div>
+                  <span
+                    class="absolute px-space-md bg-surface-container-lowest font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                    >Ou Autenticação Corporativa</span
+                  >
+                </div>
+                <!-- Alternativas SSO / Certificado Digital -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                  <button
+                    class="flex items-center justify-center gap-2 py-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all cursor-pointer shadow-sm"
+                    onclick="triggerSSO('Certificado ICP-Brasil')"
+                    type="button"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[18px] text-primary"
+                      >token</span
+                    >
+                    Certificado Digital A1/A3
+                  </button>
+                  <button
+                    class="flex items-center justify-center gap-2 py-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all cursor-pointer shadow-sm"
+                    onclick="triggerSSO('SSO Industrial Azure AD / SAML')"
+                    type="button"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[18px] text-tertiary"
+                      >hub</span
+                    >
+                    SSO Corporativo (SAML/AD)
+                  </button>
+                </div>
+              </div>
+              <!-- ======================= ABA CADASTRO ======================= -->
+              <div
+                class="hidden transition-opacity duration-300"
+                id="view-register"
+              >
+                <div class="mb-space-md">
+                  <div
+                    class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-space-xs"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >lock_clock</span
+                    >
+                    Homologação Prévia Mandatória
+                  </div>
+                  <h1
+                    class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight"
+                  >
+                    Solicitar Acesso Operacional
+                  </h1>
+                  <p class="font-body-md text-body-md text-secondary mt-0.5">
+                    Cadastre seus dados cadastrais para aprovação do supervisor
+                    geral de contratos.
+                  </p>
+                </div>
+                <form
+                  class="space-y-space-sm"
+                  onsubmit="handleAuthSubmit(event, 'register')"
+                >
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                    <!-- Nome Completo -->
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-name"
+                        >Nome Completo</label
+                      >
+                      <div class="relative flex items-center">
+                        <span
+                          class="absolute left-3 text-secondary material-symbols-outlined text-[18px]"
+                          >person</span
+                        >
+                        <input
+                          class="w-full pl-9 pr-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                          id="reg-name"
+                          placeholder="ex: Eng. Marcos Valério"
+                          required=""
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <!-- Registro CREA / CFT -->
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-council"
+                        >Registro (CREA / CFT / Matrícula)</label
+                      >
+                      <div class="relative flex items-center">
+                        <span
+                          class="absolute left-3 text-secondary material-symbols-outlined text-[18px]"
+                          >badge</span
+                        >
+                        <input
+                          class="w-full pl-9 pr-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                          id="reg-council"
+                          placeholder="ex: CREA-SP 264019"
+                          required=""
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                    <!-- E-mail Corporativo -->
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-email"
+                        >E-mail Corporativo</label
+                      >
+                      <div class="relative flex items-center">
+                        <span
+                          class="absolute left-3 text-secondary material-symbols-outlined text-[18px]"
+                          >mail</span
+                        >
+                        <input
+                          class="w-full pl-9 pr-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                          id="reg-email"
+                          placeholder="m.valerio@planta.ind.br"
+                          required=""
+                          type="email"
+                        />
+                      </div>
+                    </div>
+                    <!-- WhatsApp / Telefone de Campo -->
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-phone"
+                        >Telefone de Rádio / WhatsApp</label
+                      >
+                      <div class="relative flex items-center">
+                        <span
+                          class="absolute left-3 text-secondary material-symbols-outlined text-[18px]"
+                          >phone_iphone</span
+                        >
+                        <input
+                          class="w-full pl-9 pr-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                          id="reg-phone"
+                          placeholder="(11) 98765-4321"
+                          required=""
+                          type="tel"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Seleção de Unidade / Planta -->
+                  <div>
+                    <label
+                      class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                      for="reg-plant"
+                      >Unidade de Lotação / Planta Operacional</label
+                    >
+                    <div class="relative flex items-center">
+                      <span
+                        class="absolute left-3 text-secondary material-symbols-outlined text-[18px]"
+                        >factory</span
+                      >
+                      <select
+                        class="w-full pl-9 pr-space-md py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low cursor-pointer appearance-none"
+                        id="reg-plant"
+                        required=""
+                      >
+                        <option disabled="" selected="" value="">
+                          Selecione a planta designada...
+                        </option>
+                        <option value="porto-sul">
+                          Terminal Portuário Sul - Cais 03
+                        </option>
+                        <option value="usina-maua">
+                          Complexo Termelétrico Usina Mauá
+                        </option>
+                        <option value="polo-petroquimico">
+                          Polo Petroquímico Triunfo - Refinaria Central
+                        </option>
+                        <option value="parque-eolico">
+                          Complexo Eólico Caetité - Subestação Norte
+                        </option>
+                        <option value="mineracao-vale">
+                          Planta de Moagem e Pelotização - Mina 08
+                        </option>
+                      </select>
+                      <span
+                        class="absolute right-3 pointer-events-none text-secondary material-symbols-outlined text-[18px]"
+                        >expand_more</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Senhas & Validador de Força -->
+                  <div
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1"
+                  >
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-pass"
+                        >Definir Senha Forte</label
+                      >
+                      <input
+                        class="w-full px-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                        id="reg-pass"
+                        oninput="updatePasswordStrength(this.value)"
+                        placeholder="Min. 8 chars, 1 símbolo"
+                        required=""
+                        type="password"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-space-xs"
+                        for="reg-pass-confirm"
+                        >Confirmar Senha</label
+                      >
+                      <input
+                        class="w-full px-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low"
+                        id="reg-pass-confirm"
+                        placeholder="Repita a senha"
+                        required=""
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                  <!-- Medidor de Complexidade de Senha -->
+                  <div class="pt-0.5">
+                    <div class="flex items-center justify-between mb-1">
+                      <span class="font-label-sm text-label-sm text-secondary"
+                        >Critérios de Rigor Criptográfico:</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-secondary"
+                        id="strength-label"
+                        >Aguardando digitação...</span
+                      >
+                    </div>
+                    <div
+                      class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden flex"
+                    >
+                      <div
+                        class="h-full w-1/4 bg-surface-variant transition-colors"
+                        id="strength-bar-1"
+                      ></div>
+                      <div
+                        class="h-full w-1/4 bg-surface-variant transition-colors"
+                        id="strength-bar-2"
+                      ></div>
+                      <div
+                        class="h-full w-1/4 bg-surface-variant transition-colors"
+                        id="strength-bar-3"
+                      ></div>
+                      <div
+                        class="h-full w-1/4 bg-surface-variant transition-colors"
+                        id="strength-bar-4"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Consentimento de Compliance -->
+                  <div class="pt-space-xs">
+                    <label
+                      class="flex items-start gap-2 cursor-pointer select-none"
+                    >
+                      <input
+                        class="mt-1 w-4 h-4 rounded text-primary accent-primary cursor-pointer"
+                        required=""
+                        type="checkbox"
+                      />
+                      <span
+                        class="font-body-sm text-body-sm text-secondary leading-tight"
+                      >
+                        Declaro veracidade nas credenciais técnicas e concordo
+                        com os protocolos de Sigilo Industrial, Auditoria ISO
+                        19011 e Termos de Uso da Infraestrutura Field Ops.
+                      </span>
+                    </label>
+                  </div>
+                  <!-- Botão de Envio de Cadastro -->
+                  <button
+                    class="w-full py-space-sm px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer mt-space-sm"
+                    type="submit"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >assignment_turned_in</span
+                    >
+                    <span>Enviar Solicitação de Cadastro</span>
+                  </button>
+                </form>
+                <!-- Disclaimer de Validação -->
+                <div
+                  class="mt-space-md p-space-sm rounded-lg bg-surface-container-low text-secondary flex items-start gap-space-xs"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5"
+                    >info</span
+                  >
+                  <p class="font-body-sm text-body-sm">
+                    <strong class="font-medium text-on-surface"
+                      >Aviso de Governança:</strong
+                    >
+                    Novas solicitações passam por verificação cadastral cruzada
+                    junto ao banco de colaboradores da planta antes do primeiro
+                    despacho de OS em campo.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Bottom Security Verification Strip -->
+            <div
+              class="pt-space-md mt-space-md flex flex-wrap items-center justify-between gap-space-sm border-0 border-t border-surface-container text-secondary font-label-sm text-label-sm"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-block w-2 h-2 rounded-full bg-primary-container"
+                ></span>
+                <span>Sessão Protegida por TLS 1.3 End-to-End</span>
+              </div>
+              <div class="flex items-center gap-space-md">
+                <span
+                  class="hover:text-primary cursor-pointer"
+                  onclick="
+                    alert(
+                      'Suporte Técnico Operacional: ramal 4402 ou noc@fieldops.corp',
+                    )
+                  "
+                  >Suporte Técnico NOC</span
+                >
+                <span>•</span>
+                <span
+                  class="hover:text-primary cursor-pointer"
+                  onclick="
+                    alert(
+                      'Políticas de Segurança e Compliance V2.4 aprovadas pelo comitê de segurança da informação.',
+                    )
+                  "
+                  >Compliance NR</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function switchAuthTab(targetTab) {
+          const loginView = document.getElementById("view-login");
+          const registerView = document.getElementById("view-register");
+          const loginBtn = document.getElementById("tab-btn-login");
+          const registerBtn = document.getElementById("tab-btn-register");
+
+          if (targetTab === "login") {
+            loginView.classList.remove("hidden");
+            registerView.classList.add("hidden");
+
+            loginBtn.className =
+              "flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-on-primary bg-primary shadow-sm flex items-center justify-center gap-1.5 cursor-pointer";
+            registerBtn.className =
+              "flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-secondary hover:text-on-surface bg-transparent flex items-center justify-center gap-1.5 cursor-pointer";
+          } else {
+            registerView.classList.remove("hidden");
+            loginView.classList.add("hidden");
+
+            registerBtn.className =
+              "flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-on-primary bg-primary shadow-sm flex items-center justify-center gap-1.5 cursor-pointer";
+            loginBtn.className =
+              "flex-1 py-space-xs px-space-md rounded-lg font-title-md text-title-md transition-all duration-200 text-secondary hover:text-on-surface bg-transparent flex items-center justify-center gap-1.5 cursor-pointer";
+          }
+        }
+
+        function togglePasswordVisibility(inputId, iconId) {
+          const input = document.getElementById(inputId);
+          const icon = document.getElementById(iconId);
+          if (!input || !icon) return;
+
+          if (input.type === "password") {
+            input.type = "text";
+            icon.textContent = "visibility_off";
+          } else {
+            input.type = "password";
+            icon.textContent = "visibility";
+          }
+        }
+
+        function updatePasswordStrength(val) {
+          const b1 = document.getElementById("strength-bar-1");
+          const b2 = document.getElementById("strength-bar-2");
+          const b3 = document.getElementById("strength-bar-3");
+          const b4 = document.getElementById("strength-bar-4");
+          const lbl = document.getElementById("strength-label");
+
+          let score = 0;
+          if (val.length >= 8) score++;
+          if (/[A-Z]/.test(val)) score++;
+          if (/[0-9]/.test(val)) score++;
+          if (/[^A-Za-z0-9]/.test(val)) score++;
+
+          const bars = [b1, b2, b3, b4];
+          bars.forEach((b) => {
+            b.className = "h-full w-1/4 bg-surface-variant transition-colors";
+          });
+
+          if (val.length === 0) {
+            lbl.textContent = "Aguardando digitação...";
+            lbl.className = "font-code-sm text-code-sm text-secondary";
+            return;
+          }
+
+          if (score === 1) {
+            b1.classList.remove("bg-surface-variant");
+            b1.classList.add("bg-error");
+            lbl.textContent = "Fraca (vulnerável em campo)";
+            lbl.className =
+              "font-code-sm text-code-sm text-error font-semibold";
+          } else if (score === 2) {
+            b1.className = b2.className =
+              "h-full w-1/4 bg-tertiary-fixed-dim transition-colors";
+            lbl.textContent = "Média (requer números/símbolos)";
+            lbl.className =
+              "font-code-sm text-code-sm text-tertiary font-semibold";
+          } else if (score === 3) {
+            b1.className =
+              b2.className =
+              b3.className =
+                "h-full w-1/4 bg-primary-container transition-colors";
+            lbl.textContent = "Boa (atende requisitos)";
+            lbl.className =
+              "font-code-sm text-code-sm text-primary font-semibold";
+          } else if (score >= 4) {
+            b1.className =
+              b2.className =
+              b3.className =
+              b4.className =
+                "h-full w-1/4 bg-primary transition-colors";
+            lbl.textContent = "Excelente (padrão militar/HSM)";
+            lbl.className = "font-code-sm text-code-sm text-primary font-bold";
+          }
+        }
+
+        function handleAuthSubmit(e, type) {
+          e.preventDefault();
+          if (type === "login") {
+            const id = document.getElementById("login-identifier").value;
+            const role =
+              document.querySelector('input[name="profile_role"]:checked')
+                ?.value || "supervisor";
+            alert(
+              "Autenticação com Sucesso!\n\nPerfil: " +
+                role.toUpperCase() +
+                "\nIdentificador: " +
+                id +
+                "\nSessão criptografada inicializada no nó operacional.",
+            );
+          } else {
+            const name = document.getElementById("reg-name").value;
+            const plant = document.getElementById("reg-plant").value;
+            alert(
+              "Solicitação de Cadastro Transmitida!\n\nColaborador: " +
+                name +
+                "\nPlanta de Lotação: " +
+                plant +
+                "\nO supervisor geral da planta foi notificado para aprovação da chave.",
+            );
+            switchAuthTab("login");
+          }
+        }
+
+        function triggerSSO(provider) {
+          alert(
+            "Iniciando handshake seguro com: " +
+              provider +
+              "\nRedirecionando para o Gateway Corporativo Federado.",
+          );
+        }
+      </script>
+    </main>
+    <footer class="relative z-10 w-full py-space-md text-center">
+      <p class="font-label-sm text-label-sm text-outline">
+        © 2024 Field Operations Supervision &amp; Compliance Infrastructure. All
+        rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

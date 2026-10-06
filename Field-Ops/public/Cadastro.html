@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Field Ops - Solicitar Cadastro</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cadastro.css" />
+  </head>
+
+  <body>
+    <div class="pagina">
+      <header class="topo">
+        <div class="logo-area">
+          <div class="logo">
+            <div class="logo">
+              <span
+                class="material-symbols-outlined"
+                style="font-size: 16px; color: white"
+                >security</span
+              >
+            </div>
+          </div>
+          <div>
+            <h1>FIELD OPS</h1>
+            <span>INSPECTION GATEWAY</span>
+          </div>
+        </div>
+        <div class="status">
+          <span></span>
+          Operational Node #04
+        </div>
+      </header>
+      <main class="container painel-container">
+        <div class="row painel">
+          <section class="col-lg-5 painel-esquerdo">
+            <div class="marca">
+              <div class="icone-marca">
+                <div class="icone-marca">
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 18px; color: #bcd1fd"
+                    >assignment_turned_in</span
+                  >
+                </div>
+              </div>
+              <div>
+                <h2>FIELD OPS</h2>
+                <p>SUPERVISÃO TÉCNICA INTEGRADA</p>
+              </div>
+              <span class="versao"> ● v2.4-PRO </span>
+            </div>
+            <div class="descricao">
+              <small>CONSOLE OPERACIONAL UNIFICADO</small>
+              <h2>Gestão e Supervisão de Inspeções em Campo</h2>
+              <p>
+                Rastreabilidade ponta a ponta, auditoria contínua de ordens de
+                serviço e monitoramento em tempo real.
+              </p>
+            </div>
+            <div class="recursos">
+              <div class="recurso">
+                <div class="icone">
+                  <span class="material-symbols-outlined text-[18px]" style="font-size: 15px;"
+                    >radar</span
+                  >
+                </div>
+                <div>
+                  <h3>Supervisão em Tempo Real</h3>
+                  <p>
+                    Despacho dinâmico e rastreio de telemetria via nó
+                    operacional ativo.
+                  </p>
+                </div>
+              </div>
+              <div class="recurso">
+                <div class="icone">
+                  <span class="material-symbols-outlined text-[18px]" style="font-size: 15px;"
+                    >verified</span
+                  >
+                </div>
+                <div>
+                  <h3>Homologação Técnica NR-10 / 13 / 35</h3>
+                  <p>
+                    Checklists inteligentes com validação de APR e ART
+                    homologada.
+                  </p>
+                </div>
+              </div>
+              <div class="recurso">
+                <div class="icone">
+                  <span class="material-symbols-outlined text-[18px]" style="font-size: 15px;"
+                    >sync_saved_locally</span
+                  >
+                </div>
+                <div>
+                  <h3>Sincronização Segura Offline-First</h3>
+                  <p>
+                    Buffer criptográfico local com push automático de evidências
+                    forenses.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="imagem-campo">
+              <img src="imgs/telaCL.jpg" alt="Operação em field" />
+              <div class="seguranca">
+                <i class="bi bi-shield-lock"></i>
+                SHA-256 HSM • PROTOCOLO LGPD INDUSTRIAL
+              </div>
+            </div>
+            <div class="rodape-esquerdo">
+              <span> Planta Operacional Conectada </span>
+              <span>
+                <i class="bi bi-broadcast"></i>
+                99.98% Telemetria OK
+              </span>
+            </div>
+          </section>
+          <section class="col-lg-7 painel-direito">
+            <div class="botoes-topo">
+              <a href="index.html">
+                <button type="button" class="btn btn-login">
+                  <i class="bi bi-box-arrow-in-right"></i>
+                  Entrar na Conta
+                </button>
+              </a>
+              <button type="button" class="btn btn-cadastro">
+                <i class="bi bi-person-check"></i>
+                Solicitar Cadastro
+              </button>
+            </div>
+            <div class="cabecalho-cadastro">
+              <span class="etiqueta">
+                <i class="bi bi-person-lock"></i>
+                Homologação Prévia Mandatória
+              </span>
+              <h2>Solicitar Acesso Operacional</h2>
+              <p>
+                Cadastre seus dados cadastrais para aprovação do supervisor
+                geral de contratos.
+              </p>
+            </div>
+            <form>
+              <div class="row g-2">
+                <div class="col-md-6 campo">
+                  <label for="nome"> NOME COMPLETO </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input
+                      type="text"
+                      id="nome"
+                      class="form-control"
+                      placeholder="ex: Eng. Marcos Valério"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 campo">
+                  <label for="registro">
+                    REGISTRO (CREA / CFT / MATRÍCULA)
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-clipboard-check"></i>
+                    </span>
+                    <input
+                      type="text"
+                      id="registro"
+                      class="form-control"
+                      placeholder="ex: CREA-SP 264019"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 campo">
+                  <label for="email"> E-MAIL CORPORATIVO </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-envelope"></i>
+                    </span>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="m.valerio@planta.ind.br"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 campo">
+                  <label for="telefone"> TELEFONE DE RÁDIO / WHATSAPP </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-phone"></i>
+                    </span>
+                    <input
+                      type="tel"
+                      id="telefone"
+                      class="form-control"
+                      placeholder="(11) 98765-4321"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 campo">
+                  <label for="unidade">
+                    UNIDADE DE LOTAÇÃO / PLANTA OPERACIONAL
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-building"></i>
+                    </span>
+                    <select id="unidade" class="form-select">
+                      <option selected>Selecione a planta designada...</option>
+                      <option>Planta Industrial São Paulo</option>
+                      <option>Planta Industrial Campinas</option>
+                      <option>Planta Industrial Santos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 campo">
+                  <label for="senha"> DEFINIR SENHA FORTE </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-key"></i>
+                    </span>
+                    <input
+                      type="password"
+                      id="senha"
+                      class="form-control"
+                      placeholder="Min. 8 chars, 1 símbolo"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 campo">
+                  <label for="confirmar"> CONFIRMAR SENHA </label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-key-fill"></i>
+                    </span>
+                    <input
+                      type="password"
+                      id="confirmar"
+                      class="form-control"
+                      placeholder="Repita a senha"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="rigor">
+                <div class="rigor-texto">
+                  <span> Critérios de Rigor Criptográfico: </span>
+                  <span> Aguardando digitação... </span>
+                </div>
+                <div class="barra-rigor">
+                  <div></div>
+                </div>
+              </div>
+              <div class="termos">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="termos" />
+                  <label class="form-check-label" for="termos">
+                    Declaro veracidade nas credenciais técnicas e concordo com
+                    os protocolos de Sigilo Industrial, Auditoria ISO 19011 e
+                    Termos de Uso da Infraestrutura Field Ops.
+                  </label>
+                </div>
+              </div>
+              <button type="button" class="btn btn-enviar">
+                <i class="bi bi-clipboard-check"></i>
+                Enviar Solicitação de Cadastro
+              </button>
+              <div class="alert aviso">
+                <i class="bi bi-info-circle"></i>
+                <div>
+                  <strong>Aviso de Governança:</strong>
+                  Novas solicitações passam por verificação cadastral cruzada
+                  junto ao banco de colaboradores da planta antes do primeiro
+                  despacho de OS em campo.
+                </div>
+              </div>
+            </form>
+            <div class="rodape">
+              <span>
+                <i class="bi bi-circle-fill"></i>
+                Sessão Protegida por TLS 1.3 End-to-End
+              </span>
+              <div>
+                <span>Suporte Técnico NOC</span>
+                <b>•</b>
+                <span>Compliance NR</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer>
+        © 2024 Field Operations Supervision & Compliance Infrastructure. All
+        rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>
