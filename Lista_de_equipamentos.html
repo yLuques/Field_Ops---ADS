@@ -2,212 +2,366 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Equipamentos</title>
 
-    
+
+    <!-- Bootstrap 5 -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    
-    <link rel="stylesheet" href="Lista_de_equipamentos.css">
+
+    <!-- CSS personalizado -->
+
+    <link
+        rel="stylesheet"
+        href="Lista_de_equipamentos.css"
+    >
+
 </head>
+
 
 <body>
 
+
     <div class="container-fluid">
 
-        
+
+        <!-- CARD DA TABELA -->
+
         <div class="card shadow-sm equipamentos-card">
 
-            //TABELA
+
+            <!-- TABELA -->
+
             <div class="table-responsive">
 
                 <table class="table table-sm mb-0 equipamentos-table">
 
+
+                    <!-- CABEÇALHO -->
+
                     <thead>
+
                         <tr>
 
-                            <th class="col-checkbox text-center">
+
+                            <!-- CHECKBOX -->
+
+                            <th
+                                class="col-checkbox text-center"
+                            >
+
                                 <input
                                     class="form-check-input"
                                     type="checkbox"
                                     id="selecionarTodos"
                                 >
+
                             </th>
+
+
+                            <!-- TAG / EQUIPAMENTO -->
 
                             <th class="col-equipamento">
-                                
+
+                                TAG / EQUIPAMENTO
+
                             </th>
+
+
+                            <!-- CLIENTE -->
 
                             <th class="col-cliente">
-                               
+
+                                CLIENTE ASSOCIADO
+
                             </th>
+
+
+                            <!-- LOCAL -->
 
                             <th class="col-local">
-                               
+
+                                LOCAL / PLANTA
+
                             </th>
 
+
                         </tr>
+
                     </thead>
+
+
+                    <!-- CORPO DA TABELA -->
 
                     <tbody>
 
-                      
+
+                        <!-- =================================
+                             EQUIPAMENTO 01
+                        ================================== -->
+
                         <tr>
 
+
+                            <!-- CHECKBOX -->
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
+                            <!-- EQUIPAMENTO -->
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Gerador Diesel Scania 500kVA.jpg"
                                         alt="Gerador Diesel Scania"
                                         class="equipamento-img"
-                                        
                                     >
+
 
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-GER-09
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Gerador Diesel Scania 500kVA
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: SC-883492-X
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
+                            <!-- CLIENTE -->
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         PetrolLogística S.A.
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Contrato Master #4012
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
+
+                            <!-- LOCAL -->
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Edifício Central
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Sala de Máquinas Subsolo
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                       
+                        <!-- =================================
+                             EQUIPAMENTO 02
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Transformador Óleo 1000kVA.jpg"
-                                        alt="Transformador"
+                                        alt="Transformador Óleo 1000kVA"
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-TRAFO-02
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Transformador Óleo 1000kVA
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: WEG-TR-9182
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         Vale Indústria
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Unidade Pelotização
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Subestação SE-03
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Pátio Externo Alta Tensão
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                        
+                        <!-- =================================
+                             EQUIPAMENTO 03
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Chiller Centrífugo York 350TR.jpg"
@@ -218,66 +372,108 @@
 
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-CHILL-01
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Chiller Centrífugo York 350TR
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: YK-44210-B
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         BioTech Labs
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Campus Farma Tech
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Central de Água Gelada
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Cobertura Bloco B
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                       
+                        <!-- =================================
+                             EQUIPAMENTO 04
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Caldeira Flamotubular.jpg"
@@ -285,68 +481,111 @@
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-CALD-04
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Caldeira Flamotubular 10t/h
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: ATA-CAL-2021
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         Vale Indústria
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Planta de Beneficiamento
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Galpão de Utilidades
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Área Térmica Norte
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                        
+                        <!-- =================================
+                             EQUIPAMENTO 05
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Bomba Centrífuga KSB 75CV.jpg"
@@ -354,68 +593,111 @@
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-BOMB-12
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Bomba Centrífuga KSB 75CV
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: KSB-MEGA-048
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         PetrolLogística S.A.
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Terminal Portuário
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Casa de Bombas C
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Pier de Combustíveis
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                       
+                        <!-- =================================
+                             EQUIPAMENTO 06
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Compressor Parafuso Atlas Copco.jpg"
@@ -423,68 +705,111 @@
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-COMP-03
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Compressor Parafuso Atlas Copco
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: GA-75-VSD
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         BioTech Labs
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Centro de Vacinas
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Galpão de Ar Comprimido
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Nível Técnico 02
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                        
+                        <!-- =================================
+                             EQUIPAMENTO 07
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
+
                             <td>
-                                <div class="d-flex align-items-center gap-2">
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Quadro Geral Baixa Tensão 3200A.jpg"
@@ -492,69 +817,111 @@
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-QGBT-05
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Quadro Geral Baixa Tensão 3200A
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: SCH-01A-2014
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         Vale Indústria
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Complexo Mineração
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Sala Elétrica Central
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Painel Principal 01
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                         </tr>
 
 
-                        
+                        <!-- =================================
+                             EQUIPAMENTO 08
+                        ================================== -->
+
                         <tr>
 
+
                             <td class="text-center">
+
                                 <input
                                     class="form-check-input equipamento-check"
                                     type="checkbox"
                                 >
+
                             </td>
 
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
 
+                            <td>
+
+                                <div
+                                    class="d-flex align-items-center gap-2"
+                                >
 
                                     <img
                                         src="imagens/Nobreak Modular 120kVA.jpg"
@@ -562,54 +929,88 @@
                                         class="equipamento-img"
                                     >
 
+
                                     <div class="d-flex flex-column">
 
+
                                         <span class="equipamento-tag">
+
                                             TAG-NOBR-01
+
                                         </span>
+
 
                                         <span class="equipamento-nome">
+
                                             Nobreak Modular 120kVA
+
                                         </span>
 
+
                                         <span class="equipamento-serie">
+
                                             Série: APC-SYM-99
+
                                         </span>
+
 
                                     </div>
 
                                 </div>
+
                             </td>
 
+
                             <td>
+
                                 <div class="d-flex flex-column">
+
 
                                     <span class="cliente-nome">
+
                                         PetrolLogística S.A.
+
                                     </span>
+
 
                                     <span class="cliente-info">
+
                                         Data Center Matriz
+
                                     </span>
 
+
                                 </div>
+
                             </td>
+
 
                             <td>
+
                                 <div class="d-flex flex-column">
 
+
                                     <span class="local-nome">
+
                                         Sala de Servidores
+
                                     </span>
+
 
                                     <span class="local-info">
+
                                         Rack de Alimentação
+
                                     </span>
 
+
                                 </div>
+
                             </td>
 
+
                         </tr>
+
 
                     </tbody>
 
@@ -618,34 +1019,65 @@
             </div>
 
 
-            
+            <!-- =========================================
+                 RODAPÉ
+            ========================================== -->
+
             <div class="equipamentos-footer px-3 py-2">
 
+
                 <div class="row align-items-center g-2">
+
+
+                    <!-- QUANTIDADE -->
 
                     <div class="col-md-4">
 
                         Mostrando
-                        <strong class="text-dark">1 a 8</strong>
+
+                        <strong class="text-dark">
+                            1 a 8
+                        </strong>
+
                         de
-                        <strong class="text-dark">184</strong>
+
+                        <strong class="text-dark">
+                            184
+                        </strong>
+
                         equipamentos
 
                     </div>
 
 
+                    <!-- PAGINAÇÃO -->
+
                     <div class="col-md-8">
 
-                        <div class="d-flex justify-content-md-end align-items-center gap-2">
+                        <div
+                            class="d-flex justify-content-md-end align-items-center gap-2"
+                        >
+
 
                             <span>
                                 Exibir:
                             </span>
 
+
                             <select class="form-select form-select-sm">
-                                <option>8 por página</option>
-                                <option>16 por página</option>
-                                <option>24 por página</option>
+
+                                <option>
+                                    8 por página
+                                </option>
+
+                                <option>
+                                    16 por página
+                                </option>
+
+                                <option>
+                                    24 por página
+                                </option>
+
                             </select>
 
 
@@ -653,106 +1085,165 @@
 
                                 <ul class="pagination pagination-sm mb-0">
 
+
                                     <li class="page-item disabled">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             ‹
                                         </a>
+
                                     </li>
+
 
                                     <li class="page-item active">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             1
                                         </a>
+
                                     </li>
 
+
                                     <li class="page-item">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             2
                                         </a>
+
                                     </li>
+
 
                                     <li class="page-item">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             3
                                         </a>
+
                                     </li>
 
+
                                     <li class="page-item disabled">
+
                                         <span class="page-link">
                                             ...
                                         </span>
+
                                     </li>
 
+
                                     <li class="page-item">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             23
                                         </a>
+
                                     </li>
 
+
                                     <li class="page-item">
-                                        <a class="page-link" href="#">
+
+                                        <a
+                                            class="page-link"
+                                            href="#"
+                                        >
                                             ›
                                         </a>
+
                                     </li>
+
 
                                 </ul>
 
                             </nav>
 
+
                         </div>
 
                     </div>
 
+
                 </div>
 
             </div>
+
 
         </div>
 
     </div>
 
 
-    
+    <!-- Bootstrap JS -->
+
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 
-   
+    <!-- Selecionar todos -->
+
     <script>
 
         const selecionarTodos =
             document.getElementById("selecionarTodos");
 
+
         const checkboxes =
             document.querySelectorAll(".equipamento-check");
 
 
-        selecionarTodos.addEventListener("change", function () {
+        selecionarTodos.addEventListener(
+            "change",
+            function () {
 
-            checkboxes.forEach(function (checkbox) {
+                checkboxes.forEach(
+                    function (checkbox) {
 
-                checkbox.checked = selecionarTodos.checked;
+                        checkbox.checked =
+                            selecionarTodos.checked;
 
-            });
+                    }
+                );
 
-        });
+            }
+        );
 
 
-        checkboxes.forEach(function (checkbox) {
+        checkboxes.forEach(
+            function (checkbox) {
 
-            checkbox.addEventListener("change", function () {
+                checkbox.addEventListener(
+                    "change",
+                    function () {
 
-                selecionarTodos.checked =
-                    [...checkboxes].every(
-                        checkbox => checkbox.checked
-                    );
+                        selecionarTodos.checked =
+                            [...checkboxes].every(
+                                checkbox =>
+                                    checkbox.checked
+                            );
 
-            });
+                    }
+                );
 
-        });
+            }
+        );
 
     </script>
+
 
 </body>
 
