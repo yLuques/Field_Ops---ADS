@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Filtros de Equipamentos</title>
+
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+
+    <link
+        rel="stylesheet"
+        href="filtros-e-campos-de-busca.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="container-fluid">
+
+
+        <div class="filtros-card">
+
+
+            <div class="filtros-principal">
+
+
+                <div class="busca-container">
+
+                    <span class="busca-icone">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        class="form-control busca-input"
+                        placeholder="Buscar por TAG, número de série, cliente ou modelo..."
+                    >
+
+                </div>
+
+
+                <select class="form-select filtro-select">
+
+                    <option selected>
+                        Todas as Categorias
+                    </option>
+
+                    <option>
+                        Gerador
+                    </option>
+
+                    <option>
+                        Transformador
+                    </option>
+
+                    <option>
+                        Chiller
+                    </option>
+
+                    <option>
+                        Caldeira
+                    </option>
+
+                    <option>
+                        Bomba
+                    </option>
+
+                    <option>
+                        Compressor
+                    </option>
+
+                </select>
+
+
+
+
+                <select class="form-select filtro-select status-select">
+
+                    <option selected>
+                        Todos os Status
+                    </option>
+
+                    <option>
+                        Ativo
+                    </option>
+
+                    <option>
+                        Inativo
+                    </option>
+
+                    <option>
+                        Em manutenção
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="button"
+                    class="btn btn-filtrar"
+                >
+
+                    <span>
+                        ☷
+                    </span>
+
+                    Filtrar
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="btn btn-limpar"
+                >
+
+                    <span>
+                        ↻
+                    </span>
+
+                    Limpar
+
+                </button>
+
+            </div>
+
+
+
+            <div class="filtros-ativos">
+
+
+                <span class="filtros-label">
+                    FILTROS ATIVOS:
+                </span>
+
+
+
+                <span class="filtro-chip">
+
+                    Plantão: Turno Integral
+
+                    <button
+                        type="button"
+                        class="chip-remover"
+                    >
+                        ×
+                    </button>
+
+                </span>
+
+
+
+                <span class="filtro-chip">
+
+                    Unidades Ativas: Sudeste & Sul
+
+                    <button
+                        type="button"
+                        class="chip-remover"
+                    >
+                        ×
+                    </button>
+
+                </span>
+
+
+
+                <button
+                    type="button"
+                    class="reset-filtros"
+                >
+                    Resetar parâmetros
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+
+</html>
