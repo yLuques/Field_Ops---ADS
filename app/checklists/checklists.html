@@ -1,0 +1,280 @@
+<!doctype html>
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Modelos de Checklist | Field Ops</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/checklists.css" rel="stylesheet" />
+</head>
+
+<body data-page="checklists">
+    <header class="app-topbar">
+        <a class="brand" href="../dashboard/dashboard.html"><span class="brand-mark"><i
+                    class="bi bi-shield-check"></i></span><span>FIELD OPS<small>SUPERVISION HUB</small></span></a><span
+            class="badge text-bg-primary-subtle text-primary-emphasis d-none d-md-inline">v2.4-PRO</span><span
+            class="small-label d-none d-xl-inline"><i class="bi bi-circle-fill text-success me-1"
+                style="font-size:7px"></i>Plant&atilde;o ativo</span>
+        <div class="input-group input-group-sm top-search"><span class="input-group-text bg-light border-0"><i
+                    class="bi bi-search text-secondary"></i></span><input aria-label="Busca geral"
+                class="form-control bg-light border-0" placeholder="Buscar OS, inspetor, local..." /></div>
+        <button aria-label="Notifica&ccedil;&otilde;es" class="btn-icon position-relative" type="button"><i
+                class="bi bi-bell"></i><span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size:8px">3</span></button>
+        <div class="top-user">
+            <div class="avatar">CE</div>
+            <div class="user-meta">
+                <div class="fw-semibold small">Carlos Eduardo</div>
+                <div class="text-muted" style="font-size:.68rem">Supervisor de Campo</div>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Navega&ccedil;&atilde;o principal" class="mobile-page-nav"><a class="side-link"
+            href="../dashboard/dashboard.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link"
+            href="../acompanhamento/acompanhamento.html"><i class="bi bi-list-check"></i><span>Acompanhamento</span></a><a
+            class="side-link" href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link active" href="./checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a></nav>
+    <aside class="app-sidebar">
+        <div class="nav-caption">Opera&ccedil;&otilde;es em campo</div><a class="side-link" href="../dashboard/dashboard.html"><i
+                class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link" href="../acompanhamento/acompanhamento.html"><i
+                class="bi bi-list-check"></i><span>Acompanhamento</span></a><a class="side-link"
+            href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link active" href="./checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a>
+        <div class="telemetry-box">
+            <div class="d-flex justify-content-between mb-1"><strong><i class="bi bi-broadcast me-1"></i>Rede
+                    Telemetria</strong><b class="text-success">100% OK</b></div><span>18 inspetores sincronizados no
+                turno atual.</span>
+        </div>
+    </aside>
+
+    <main class="app-main">
+        <div class="page-heading">
+            <div>
+                <div class="crumb">Operacional <span class="mx-2">/</span> Formul&aacute;rios &amp; Compliance</div>
+                <h1>Modelos de Checklist</h1>
+                <p>Padronize e gerencie os formul&aacute;rios de inspe&ccedil;&atilde;o t&eacute;cnica aplicados em
+                    campo.</p>
+            </div>
+            <div class="page-actions d-flex gap-2"><button class="btn btn-outline-secondary" id="importTemplate"
+                    type="button"><i class="bi bi-download me-1"></i>Importar Modelo Padr&atilde;o</button><button
+                    class="btn btn-primary" type="button"><i class="bi bi-plus-lg me-1"></i>Criar Novo Modelo</button>
+            </div>
+        </div>
+        <div class="row g-3 mb-3">
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Total de modelos</span>
+                    <div class="metric-value">36</div><small class="text-success">+3 homologados este
+                        m&ecirc;s</small><span class="icon-box metric-icon"><i class="bi bi-ui-checks"></i></span>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Em produ&ccedil;&atilde;o ativa</span>
+                    <div class="metric-value text-primary">29</div><small class="text-muted">80,5% prontos para
+                        uso</small><span class="icon-box metric-icon"><i class="bi bi-patch-check"></i></span>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Rascunhos / revis&atilde;o</span>
+                    <div class="metric-value text-warning">7</div><small class="text-muted">2 aguardando
+                        aprova&ccedil;&atilde;o</small><span class="icon-box metric-icon"><i
+                            class="bi bi-pencil-square"></i></span>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Ader&ecirc;ncia a normas</span>
+                    <div class="metric-value text-success">99,4%</div><small class="text-muted">NR-10, NR-13,
+                        NR-35</small><span class="icon-box metric-icon"><i class="bi bi-shield-check"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-xl-8">
+                <section class="card">
+                    <div class="card-body p-3">
+                        <div class="row g-2 align-items-end">
+                            <div class="col-md-5"><label class="form-label">Setor</label><select class="form-select"
+                                    id="checkSector">
+                                    <option value="">Todos os setores</option>
+                                    <option>El&eacute;trica &amp; Automa&ccedil;&atilde;o</option>
+                                    <option>Termodin&acirc;mica</option>
+                                    <option>Subesta&ccedil;&otilde;es</option>
+                                    <option>Climatiza&ccedil;&atilde;o &amp; HVAC</option>
+                                </select></div>
+                            <div class="col-md-4"><label class="form-label">Status</label><select class="form-select"
+                                    id="checkStatus">
+                                    <option value="">Todos</option>
+                                    <option>Publicado</option>
+                                    <option>Rascunho</option>
+                                </select></div>
+                            <div class="col-md-3"><label class="form-label">Buscar modelo</label><input
+                                    class="form-control" id="checkSearch" placeholder="Nome ou norma..." /></div>
+                        </div>
+                    </div>
+                    <div class="checklist-list" id="checklistList">
+                        <article class="template-card" data-sector="El&eacute;trica &amp; Automa&ccedil;&atilde;o"
+                            data-status="Publicado"
+                            data-title="Inspe&ccedil;&atilde;o Preventiva de Geradores e Motores Estacion&aacute;rios">
+                            <div class="template-icon electric"><i class="bi bi-lightning-charge"></i></div>
+                            <div class="template-main">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-1"><span
+                                        class="small-label">El&eacute;trica &amp; Automa&ccedil;&atilde;o &middot;
+                                        NR-10</span><span class="badge-soft status-ok">Publicado</span><span
+                                        class="badge bg-light text-dark">v3.2</span></div>
+                                <h2>Inspe&ccedil;&atilde;o Preventiva de Geradores e Motores Estacion&aacute;rios</h2>
+                                <p>Verifica&ccedil;&atilde;o de n&iacute;vel de &oacute;leo, estanqueidade,
+                                    vibra&ccedil;&atilde;o mec&acirc;nica, ru&iacute;do anormal e painel de comando com
+                                    telemetria ativa.</p>
+                                <div class="template-meta"><span><b>28</b> itens</span><span><b>8</b> c/ foto
+                                        obrigat&oacute;ria</span><span>Revisado em 14/10/2024</span><span>142
+                                        relat&oacute;rios</span></div>
+                                <div class="template-actions"><button
+                                        class="btn btn-sm btn-outline-primary preview-template" data-template="0"
+                                        type="button"><i class="bi bi-eye me-1"></i>Visualizar Perguntas</button><button
+                                        class="btn btn-sm btn-light edit-template" type="button"><i
+                                            class="bi bi-pencil me-1"></i>Editar</button><button
+                                        class="btn btn-sm btn-light duplicate-template" type="button"><i
+                                            class="bi bi-copy me-1"></i>Duplicar</button></div>
+                            </div>
+                        </article>
+                        <article class="template-card" data-sector="Termodin&acirc;mica" data-status="Publicado"
+                            data-title="Auditoria de Seguran&ccedil;a em Vasos de Press&atilde;o e Caldeiras">
+                            <div class="template-icon thermo"><i class="bi bi-speedometer2"></i></div>
+                            <div class="template-main">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-1"><span
+                                        class="small-label">Termodin&acirc;mica &middot; NR-13</span><span
+                                        class="badge-soft status-ok">Publicado</span><span
+                                        class="badge bg-light text-dark">v1.8</span></div>
+                                <h2>Auditoria de Seguran&ccedil;a em Vasos de Press&atilde;o e Caldeiras</h2>
+                                <p>Avalia&ccedil;&atilde;o de v&aacute;lvulas de al&iacute;vio, man&ocirc;metros
+                                    calibrados, teste hidrost&aacute;tico e registro de integridade estrutural.</p>
+                                <div class="template-meta"><span><b>42</b> itens</span><span><b>12</b> evid&ecirc;ncias
+                                        obrigat&oacute;rias</span><span>Revisado em 22/09/2024</span><span>88
+                                        relat&oacute;rios</span></div>
+                                <div class="template-actions"><button
+                                        class="btn btn-sm btn-outline-primary preview-template" data-template="1"
+                                        type="button"><i class="bi bi-eye me-1"></i>Visualizar Perguntas</button><button
+                                        class="btn btn-sm btn-light edit-template" type="button"><i
+                                            class="bi bi-pencil me-1"></i>Editar</button><button
+                                        class="btn btn-sm btn-light duplicate-template" type="button"><i
+                                            class="bi bi-copy me-1"></i>Duplicar</button></div>
+                            </div>
+                        </article>
+                        <article class="template-card" data-sector="Subesta&ccedil;&otilde;es" data-status="Rascunho"
+                            data-title="Ronda Di&aacute;ria de Subesta&ccedil;&atilde;o e Transformadores">
+                            <div class="template-icon station"><i class="bi bi-lightning"></i></div>
+                            <div class="template-main">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-1"><span
+                                        class="small-label">Subesta&ccedil;&otilde;es &middot; Uso interno</span><span
+                                        class="badge-soft status-warn">Rascunho</span><span
+                                        class="badge bg-light text-dark">v2.0-beta</span></div>
+                                <h2>Ronda Di&aacute;ria de Subesta&ccedil;&atilde;o e Transformadores</h2>
+                                <p>Termografia preliminar, inspe&ccedil;&atilde;o visual de buchas, vazamentos de
+                                    &oacute;leo isolante e malha de aterramento de p&aacute;tio.</p>
+                                <div class="template-meta"><span><b>18</b> itens</span><span><b>4</b> evid&ecirc;ncias
+                                        obrigat&oacute;rias</span><span>Revisado hoje, 09:42</span><span>Pendente
+                                        supervisor</span></div>
+                                <div class="template-actions"><button
+                                        class="btn btn-sm btn-outline-primary preview-template" data-template="2"
+                                        type="button"><i class="bi bi-eye me-1"></i>Visualizar Perguntas</button><button
+                                        class="btn btn-sm btn-light edit-template" type="button">Continuar
+                                        Editando</button><button class="btn btn-sm btn-outline-success publish-template"
+                                        type="button">Publicar Modelo</button></div>
+                            </div>
+                        </article>
+                        <article class="template-card" data-sector="Climatiza&ccedil;&atilde;o &amp; HVAC"
+                            data-status="Publicado" data-title="Checklist de Condicionamento de Ar Central (Chillers)">
+                            <div class="template-icon hvac"><i class="bi bi-snow"></i></div>
+                            <div class="template-main">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-1"><span
+                                        class="small-label">Climatiza&ccedil;&atilde;o &amp; HVAC &middot; PMOC /
+                                        Anvisa</span><span class="badge-soft status-ok">Publicado</span><span
+                                        class="badge bg-light text-dark">v4.1</span></div>
+                                <h2>Checklist de Condicionamento de Ar Central (Chillers)</h2>
+                                <p>Press&atilde;o dos gases refrigerantes, satura&ccedil;&atilde;o de filtros,
+                                    balanceamento de vaz&atilde;o de dutos e quadro el&eacute;trico de for&ccedil;a e
+                                    comando.</p>
+                                <div class="template-meta"><span><b>34</b> itens</span><span><b>6</b> c/
+                                        foto</span><span>Revisado em 03/11/2024</span><span>210 relat&oacute;rios</span>
+                                </div>
+                                <div class="template-actions"><button
+                                        class="btn btn-sm btn-outline-primary preview-template" data-template="3"
+                                        type="button"><i class="bi bi-eye me-1"></i>Visualizar Perguntas</button><button
+                                        class="btn btn-sm btn-light edit-template" type="button">Editar</button><button
+                                        class="btn btn-sm btn-light duplicate-template" type="button">Duplicar</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <aside class="col-xl-4">
+                <section class="card preview-panel">
+                    <div class="card-header p-3 d-flex justify-content-between">
+                        <div>
+                            <h2 class="section-title">Pr&eacute;via do Formul&aacute;rio</h2><small class="text-muted"
+                                id="previewVersion">v3.2 &middot; Modelo selecionado</small>
+                        </div><i class="bi bi-file-earmark-check text-primary fs-4"></i>
+                    </div>
+                    <div class="card-body p-3">
+                        <h3 class="h6 fw-bold" id="previewTitle">Inspe&ccedil;&atilde;o Preventiva de Geradores</h3>
+                        <small class="text-muted" id="previewNorm">Conformidade NR-10 &amp; ABNT</small>
+                        <div class="mt-3" id="previewQuestions">
+                            <div class="preview-question"><span>Item 01 &middot; Foto</span><b>A press&atilde;o do
+                                    man&ocirc;metro de &oacute;leo est&aacute; calibrada entre 4 e 6 bar?</b>
+                                <div class="d-flex gap-2 mt-2"><span
+                                        class="badge-soft status-neutral">Conforme</span><span
+                                        class="badge-soft status-neutral">N&atilde;o Conf.</span><span
+                                        class="badge-soft status-neutral">N/A</span></div>
+                            </div>
+                            <div class="preview-question"><span>Item 02 &middot; Cr&iacute;tico</span><b>Existe
+                                    vazamento percept&iacute;vel de combust&iacute;vel nos conectores de
+                                    inje&ccedil;&atilde;o?</b>
+                                <div class="d-flex gap-2 mt-2"><span
+                                        class="badge-soft status-neutral">Conforme</span><span
+                                        class="badge-soft status-neutral">N&atilde;o Conf.</span><span
+                                        class="badge-soft status-neutral">N/A</span></div>
+                            </div>
+                            <div class="preview-question"><span>Item 03 &middot; Valor
+                                    num&eacute;rico</span><b>Tens&atilde;o de sa&iacute;da entre fases no disjuntor
+                                    principal (V):</b><input class="form-control form-control-sm mt-2" disabled=""
+                                    placeholder="Digite um valor" /></div>
+                        </div><small class="text-muted d-block mt-3" id="previewCount">Exibindo 3 de 28
+                            perguntas</small><button class="btn btn-sm btn-outline-primary w-100 mt-2"
+                            id="showAllQuestions" type="button">Ver todas as perguntas <i
+                                class="bi bi-arrow-right"></i></button>
+                    </div>
+                </section>
+                <section class="card p-3 mt-3">
+                    <h2 class="section-title mb-3">Diretrizes de Cria&ccedil;&atilde;o</h2>
+                    <div class="d-flex gap-2"><i class="bi bi-lightbulb text-warning fs-5"></i>
+                        <p class="small mb-0">Perguntas com <b>N&atilde;o Conformidade Cr&iacute;tica</b> bloqueiam a
+                            assinatura digital do cliente at&eacute; a gera&ccedil;&atilde;o autom&aacute;tica do plano
+                            de conten&ccedil;&atilde;o emergencial.</p>
+                    </div>
+                    <hr />
+                    <div class="d-flex gap-2"><i class="bi bi-cloud-check text-primary fs-5"></i>
+                        <div class="small"><b>Sincroniza&ccedil;&atilde;o Offline</b><span
+                                class="d-block text-muted">Dispon&iacute;vel em tablets e smartphones.</span></div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="text-center text-muted small pt-4">Field Operations Supervision &amp; Compliance Infrastructure
+            &middot; Demonstra&ccedil;&atilde;o de interface</footer>
+    </main>
+</body>
+
+</html>
