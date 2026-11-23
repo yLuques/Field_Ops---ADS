@@ -1,0 +1,213 @@
+
+<section class="interface-operacional">
+
+    <h2>Indicadores Operacionais</h2>
+
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-xl-3">
+            <div class="card metric-card">
+                <span class="small-label">Disponibilidade operacional</span>
+                <div class="metric-value text-success">94,8%</div>
+                <small class="text-success">175 de 184 máquinas</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card metric-card">
+                <span class="small-label">Criticidade alta</span>
+                <div class="metric-value text-danger">26</div>
+                <small class="text-muted">Monitoramento 24/7</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card metric-card">
+                <span class="small-label">Próximas inspeções (7d)</span>
+                <div class="metric-value text-warning">19</div>
+                <small class="text-muted">3 em atraso</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card metric-card">
+                <span class="small-label">OS concluídas / mês</span>
+                <div class="metric-value">342</div>
+                <small class="text-success">100% auditadas</small>
+            </div>
+        </div>
+    </div>
+
+    <section class="card mb-4">
+        <div class="card-body p-3">
+
+            <h2 class="section-title mb-3">Busca e filtros</h2>
+
+            <div class="row g-2">
+
+                <div class="col-lg-5">
+                    <label class="form-label">Buscar TAG / equipamento</label>
+                    <input class="form-control"
+                        placeholder="Digite TAG, nome ou série...">
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select">
+                        <option>Todas as categorias</option>
+                        <option>HVAC</option>
+                        <option>Elétrica</option>
+                        <option>Caldeiras</option>
+                        <option>Mecânica</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Todos</option>
+                        <option>Operante</option>
+                        <option>Atenção</option>
+                        <option>Manutenção</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2 d-flex align-items-end">
+                    <button class="btn btn-primary w-100" type="button">
+                        <i class="bi bi-funnel me-1"></i>Filtrar
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="mt-3">
+                <span class="small text-muted">Filtros ativos:</span>
+                <span class="badge text-bg-light">Turno integral</span>
+                <span class="badge text-bg-light">Sudeste e Sul</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card mb-4">
+
+        <div class="card-body">
+            <h2 class="section-title">Tabela de equipamentos</h2>
+            <p class="text-muted small">Visualização de informações operacionais.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>TAG / Equipamento</th>
+                        <th>Cliente associado</th>
+                        <th>Local / Planta</th>
+                        <th>Criticidade</th>
+                        <th>Última inspeção</th>
+                        <th>Próxima inspeção</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><b>TAG-GER-09</b><br>Gerador Diesel Scania</td>
+                        <td>PetroLogística S.A.</td>
+                        <td>Edifício Central</td>
+                        <td><span class="badge-soft status-danger">Alta</span></td>
+                        <td>14/05/2024</td>
+                        <td>28/05/2024</td>
+                        <td><span class="badge-soft status-ok">Operante</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>TAG-TRAFO-02</b><br>Transformador Óleo</td>
+                        <td>Vale Indústria</td>
+                        <td>Subestação SE-03</td>
+                        <td><span class="badge-soft status-danger">Alta</span></td>
+                        <td>02/05/2024</td>
+                        <td>16/05/2024</td>
+                        <td><span class="badge-soft status-warn">Atenção</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>TAG-CHILL-01</b><br>Chiller York</td>
+                        <td>BioTech Labs</td>
+                        <td>Central de Água Gelada</td>
+                        <td><span class="badge-soft status-warn">Média</span></td>
+                        <td>25/04/2024</td>
+                        <td>25/05/2024</td>
+                        <td><span class="badge-soft status-ok">Operante</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>TAG-CALD-04</b><br>Caldeira Flamotubular</td>
+                        <td>Vale Indústria</td>
+                        <td>Galpão de Utilidades</td>
+                        <td><span class="badge-soft status-danger">Alta</span></td>
+                        <td>10/04/2024</td>
+                        <td>10/05/2024</td>
+                        <td><span class="badge-soft status-warn">Manutenção</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+            <small class="text-muted">Mostrando 1 a 4 de 184 equipamentos</small>
+
+            <nav>
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item"><a class="page-link">...</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+
+    <div class="row g-3">
+
+        <div class="col-md-6">
+            <section class="card p-3">
+                <h3 class="section-title">Resumo do equipamento</h3>
+                <div class="interface-info">
+                    <span>Equipamento</span>
+                    <b>Grupo Gerador de Emergência</b>
+                </div>
+                <div class="interface-info">
+                    <span>Cliente</span>
+                    <b>PetroLogística S.A.</b>
+                </div>
+                <div class="interface-info">
+                    <span>Planta / Setor</span>
+                    <b>Edifício Central / Subsolo 02</b>
+                </div>
+                <div class="interface-info">
+                    <span>Horímetro acumulado</span>
+                    <b>3.412,4 h</b>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="card p-3">
+                <h3 class="section-title">Indicadores técnicos</h3>
+
+                <div class="soft-panel mb-2">
+                    <small class="text-muted">Índice MTBF</small>
+                    <b class="d-block fs-5">1.480h</b>
+                </div>
+
+                <div class="soft-panel">
+                    <small class="text-muted">Conformidade NR-10/12</small>
+                    <b class="d-block fs-5 text-success">100% OK</b>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</section>
