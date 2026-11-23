@@ -1,0 +1,114 @@
+
+.chart-legend {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: .65rem;
+    color: #596d83;
+}
+
+.chart-legend span {
+    white-space: nowrap;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    margin-right: 4px;
+}
+
+.legend-dot.planned {
+    background: #c9defb;
+}
+
+.legend-dot.done {
+    background: #0876a7;
+}
+
+.legend-dot.failed {
+    background: #cf302d;
+}
+
+.bar-chart {
+    height: 205px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background: #f7faff;
+    border-radius: 10px;
+    padding: 16px 10px 6px;
+}
+
+.bar-group {
+    height: 100%;
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.bar-pair {
+    height: 85%;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.bar-pair i {
+    display: block;
+    width: 14px;
+    background: #c9defb;
+    border-radius: 4px 4px 0 0;
+}
+
+.bar-pair i:nth-child(2) {
+    background: #0876a7;
+}
+
+.bar-pair i.bad {
+    background: #c92e2b;
+    width: 13px;
+}
+
+.bar-group small {
+    font-size: .65rem;
+    color: #52677f;
+}
+
+.bar-group.active {
+    background: #edf4ff;
+    border-radius: 9px 9px 0 0;
+}
+
+.bar-group.active small {
+    color: #0876a7;
+    font-weight: 800;
+}
+
+@media(max-width:575px) {
+    .chart-legend {
+        font-size: .58rem;
+    }
+
+    .bar-pair {
+        gap: 3px;
+    }
+
+    .bar-pair i {
+        width: 10px;
+    }
+
+    .bar-pair i.bad {
+        width: 9px;
+    }
+
+    .bar-chart {
+        height: 175px;
+    }
+}

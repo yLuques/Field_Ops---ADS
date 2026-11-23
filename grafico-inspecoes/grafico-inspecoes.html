@@ -1,0 +1,84 @@
+
+<section class="card mb-3">
+    <div class="card-body p-3 p-lg-4">
+
+        <div class="d-flex justify-content-between align-items-start gap-2 mb-3">
+            <div>
+                <h2 class="section-title">
+                    Andamento Semanal das Inspeções
+                </h2>
+                <div class="section-subtitle">
+                    Comparativo volumétrico: planejadas vs realizadas
+                    vs não conformes
+                </div>
+            </div>
+
+            <div class="chart-legend">
+                <span><i class="legend-dot planned"></i>Planejadas</span>
+                <span><i class="legend-dot done"></i>Realizadas</span>
+                <span><i class="legend-dot failed"></i>Não conformes</span>
+            </div>
+        </div>
+
+        <div class="bar-chart" id="weeklyChart">
+
+            <div class="bar-group">
+                <div class="bar-pair">
+                    <i style="height:75%"></i>
+                    <i style="height:68%"></i>
+                    <i class="bad" style="height:14%"></i>
+                </div>
+                <small>Seg (07)</small>
+            </div>
+
+            <div class="bar-group">
+                <div class="bar-pair">
+                    <i style="height:88%"></i>
+                    <i style="height:84%"></i>
+                    <i class="bad" style="height:25%"></i>
+                </div>
+                <small>Ter (08)</small>
+            </div>
+
+            <div class="bar-group">
+                <div class="bar-pair">
+                    <i style="height:82%"></i>
+                    <i style="height:73%"></i>
+                    <i class="bad" style="height:9%"></i>
+                </div>
+                <small>Qua (09)</small>
+            </div>
+
+            <div class="bar-group">
+                <div class="bar-pair">
+                    <i style="height:100%"></i>
+                    <i style="height:91%"></i>
+                    <i class="bad" style="height:20%"></i>
+                </div>
+                <small>Qui (10)</small>
+            </div>
+
+            <div class="bar-group active">
+                <div class="bar-pair">
+                    <i style="height:66%"></i>
+                    <i style="height:59%"></i>
+                    <i class="bad" style="height:21%"></i>
+                </div>
+                <small>Hoje (Sex)</small>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-2">
+            <span class="small text-muted">
+                <i class="bi bi-graph-up-arrow text-primary me-1"></i>
+                Aderência total no período de
+                <b class="text-dark">92,8%</b>
+            </span>
+            <span class="small text-muted">
+                Atualizado às 14:32
+            </span>
+        </div>
+
+    </div>
+</section>
