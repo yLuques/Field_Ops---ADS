@@ -1,0 +1,313 @@
+<!doctype html>
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Dashboard Operacional | Field Ops</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body data-page="dashboard">
+    <header class="app-topbar">
+        <a class="brand" href="./dashboard.html"><span class="brand-mark"><i
+                    class="bi bi-shield-check"></i></span><span>FIELD OPS<small>SUPERVISION HUB</small></span></a><span
+            class="badge text-bg-primary-subtle text-primary-emphasis d-none d-md-inline">v2.4-PRO</span><span
+            class="small-label d-none d-xl-inline"><i class="bi bi-circle-fill text-success me-1"
+                style="font-size:7px"></i>Plant&atilde;o ativo</span>
+        <div class="input-group input-group-sm top-search"><span class="input-group-text bg-light border-0"><i
+                    class="bi bi-search text-secondary"></i></span><input aria-label="Busca geral"
+                class="form-control bg-light border-0" placeholder="Buscar OS, inspetor, local..." /></div>
+        <button aria-label="Notifica&ccedil;&otilde;es" class="btn-icon position-relative" type="button"><i
+                class="bi bi-bell"></i><span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size:8px">3</span></button>
+        <div class="top-user">
+            <div class="avatar">CE</div>
+            <div class="user-meta">
+                <div class="fw-semibold small">Carlos Eduardo</div>
+                <div class="text-muted" style="font-size:.68rem">Supervisor de Campo</div>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Navega&ccedil;&atilde;o principal" class="mobile-page-nav"><a class="side-link active"
+            href="./dashboard.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link"
+            href="../acompanhamento/acompanhamento.html"><i class="bi bi-list-check"></i><span>Acompanhamento</span></a><a
+            class="side-link" href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link" href="../checklists/checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a></nav>
+    <aside class="app-sidebar">
+        <div class="nav-caption">Opera&ccedil;&otilde;es em campo</div><a class="side-link active"
+            href="./dashboard.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link"
+            href="../acompanhamento/acompanhamento.html"><i class="bi bi-list-check"></i><span>Acompanhamento</span></a><a
+            class="side-link" href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link" href="../checklists/checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a>
+        <div class="telemetry-box">
+            <div class="d-flex justify-content-between mb-1"><strong><i class="bi bi-broadcast me-1"></i>Rede
+                    Telemetria</strong><b class="text-success">100% OK</b></div><span>18 inspetores sincronizados no
+                turno atual.</span>
+        </div>
+    </aside>
+
+    <main class="app-main">
+        <div class="page-heading">
+            <div>
+                <div class="crumb">Centro de Despacho T&aacute;tico <span class="mx-2">&bull;</span> Plataforma Sul
+                    &amp; Sudeste</div>
+                <h1>Dashboard Operacional</h1>
+                <p>Vis&atilde;o consolidada das inspe&ccedil;&otilde;es de campo em tempo real</p>
+            </div>
+            <div class="page-actions d-flex gap-2 align-items-center">
+                <div class="btn-group btn-group-sm" id="periodButtons" role="group"><button class="btn btn-light active"
+                        data-period="Hoje" type="button">Hoje</button><button class="btn btn-light"
+                        data-period="Esta Semana" type="button">Esta Semana</button><button class="btn btn-light"
+                        data-period="Este M&ecirc;s" type="button">Este M&ecirc;s</button></div><button
+                    class="btn btn-outline-secondary btn-sm" id="exportDashboard" type="button"><i
+                        class="bi bi-download me-1"></i> Exportar Relat&oacute;rio</button><a
+                    class="btn btn-primary btn-sm" href="../inspections/planejar-inspecao.html"><i class="bi bi-plus-circle me-1"></i>
+                    Planejar Inspe&ccedil;&atilde;o</a>
+            </div>
+        </div>
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Inspe&ccedil;&otilde;es pendentes</span><span
+                        class="icon-box metric-icon"><i class="bi bi-clock"></i></span>
+                    <div class="metric-value tabular">14</div>
+                    <div class="d-flex justify-content-between metric-foot"><span>Fila operacional</span><b
+                            class="text-primary">+2 hoje</b></div>
+                    <div class="mini-progress mt-2"><span style="width:42%"></span></div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Em andamento</span><span
+                        class="icon-box metric-icon"><i class="bi bi-geo-alt"></i></span>
+                    <div class="metric-value text-primary tabular">08</div>
+                    <div class="d-flex justify-content-between metric-foot"><span>Rastreados por GPS</span><b>4
+                            t&eacute;cnicos ativos</b></div>
+                    <div class="mini-progress mt-2"><span style="width:68%"></span></div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Conclu&iacute;das hoje</span><span
+                        class="icon-box metric-icon"><i class="bi bi-check-circle"></i></span>
+                    <div class="metric-value tabular">29</div>
+                    <div class="d-flex justify-content-between metric-foot"><span>Conformidade de SLA</span><b>94% da
+                            meta</b></div>
+                    <div class="mini-progress mt-2"><span style="width:94%"></span></div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card metric-danger"><span class="small-label">Cr&iacute;ticas / NCs</span><span
+                        class="icon-box metric-icon"><i class="bi bi-exclamation-triangle"></i></span>
+                    <div class="metric-value text-danger tabular">05</div>
+                    <div class="d-flex justify-content-between metric-foot"><span>Triagem imediata</span><b
+                            class="text-danger">Urg&ecirc;ncia alta</b></div>
+                    <div class="mini-progress mt-2"><span style="width:82%"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-xl-8">
+                <section class="card mb-3">
+                    <div class="card-body p-3 p-lg-4">
+                        <div class="d-flex justify-content-between align-items-start gap-2 mb-3">
+                            <div>
+                                <h2 class="section-title">Andamento Semanal das Inspe&ccedil;&otilde;es</h2>
+                                <div class="section-subtitle">Comparativo volum&eacute;trico: planejadas vs realizadas
+                                    vs n&atilde;o conformes</div>
+                            </div>
+                            <div class="chart-legend"><span><i class="legend-dot planned"></i>Planejadas</span><span><i
+                                        class="legend-dot done"></i>Realizadas</span><span><i
+                                        class="legend-dot failed"></i>N&atilde;o conformes</span></div>
+                        </div>
+                        <div class="bar-chart" id="weeklyChart">
+                            <div class="bar-group">
+                                <div class="bar-pair"><i style="height:75%"></i><i style="height:68%"></i><i class="bad"
+                                        style="height:14%"></i></div><small>Seg (07)</small>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-pair"><i style="height:88%"></i><i style="height:84%"></i><i class="bad"
+                                        style="height:25%"></i></div><small>Ter (08)</small>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-pair"><i style="height:82%"></i><i style="height:73%"></i><i class="bad"
+                                        style="height:9%"></i></div><small>Qua (09)</small>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-pair"><i style="height:100%"></i><i style="height:91%"></i><i
+                                        class="bad" style="height:20%"></i></div><small>Qui (10)</small>
+                            </div>
+                            <div class="bar-group active">
+                                <div class="bar-pair"><i style="height:66%"></i><i style="height:59%"></i><i class="bad"
+                                        style="height:21%"></i></div><small>Hoje (Sex)</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-2"><span
+                                class="small text-muted"><i
+                                    class="bi bi-graph-up-arrow text-primary me-1"></i>Ader&ecirc;ncia total no
+                                per&iacute;odo de <b class="text-dark">92,8%</b></span><span
+                                class="small text-muted">Atualizado &agrave;s 14:32</span></div>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                        <div>
+                            <h2 class="section-title">Inspe&ccedil;&otilde;es Recentes em Tempo Real</h2>
+                            <div class="section-subtitle">Rela&ccedil;&atilde;o ao vivo dos relat&oacute;rios
+                                sincronizados</div>
+                        </div><span class="badge-soft status-info">Turno: TARDE (13h&ndash;22h)</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>ID / OS</th>
+                                    <th>Cliente &amp; Local</th>
+                                    <th>Equipamento</th>
+                                    <th>T&eacute;cnico resp.</th>
+                                    <th>Hor&aacute;rio</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-tag">#INS-2048</td>
+                                    <td><b>PetroLog Log&iacute;stica</b><small class="d-block text-muted">Terminal 3 -
+                                            Doca Norte</small></td>
+                                    <td>V&aacute;lvula Reguladora V-401</td>
+                                    <td><span class="avatar d-inline-grid me-1">RR</span>Roberto Rocha</td>
+                                    <td>14:15</td>
+                                    <td><span class="badge-soft status-info">Em andamento</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-tag">#INS-2047</td>
+                                    <td><b>Sider&uacute;rgica Guanabara</b><small
+                                            class="d-block text-muted">Lamina&ccedil;&atilde;o 02</small></td>
+                                    <td>Motor El&eacute;trico Trif&aacute;sico 75CV</td>
+                                    <td><span class="avatar amber d-inline-grid me-1">LM</span>Lucas Mendes</td>
+                                    <td>13:50</td>
+                                    <td><span class="badge-soft status-warn">Aguardando revis&atilde;o</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-tag">#INS-2046</td>
+                                    <td><b>Usina Hidroel&eacute;trica Mau&aacute;</b><small
+                                            class="d-block text-muted">Subesta&ccedil;&atilde;o Elevadora</small></td>
+                                    <td>Transformador Principal T-01</td>
+                                    <td><span class="avatar red d-inline-grid me-1">MS</span>Marcos Silva</td>
+                                    <td>13:25</td>
+                                    <td><span class="badge-soft status-danger">N&atilde;o conforme</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-tag">#INS-2045</td>
+                                    <td><b>NutriAlimentos S/A</b><small class="d-block text-muted">Linha de Envase
+                                            04</small></td>
+                                    <td>Compressor Scroll Atlas Copco</td>
+                                    <td>Juliana Duarte</td>
+                                    <td>12:40</td>
+                                    <td><span class="badge-soft status-ok">Conclu&iacute;da</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="table-tag">#INS-2044</td>
+                                    <td><b>Cervejaria Premium</b><small class="d-block text-muted">Galp&atilde;o de
+                                            Fermenta&ccedil;&atilde;o</small></td>
+                                    <td>Painel El&eacute;trico de Automa&ccedil;&atilde;o</td>
+                                    <td>Andr&eacute; Costa</td>
+                                    <td>11:15</td>
+                                    <td><span class="badge-soft status-ok">Conclu&iacute;da</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center"><small
+                            class="text-muted">Exibindo 5 de 37 ordens ativas</small>
+                        <div><button class="btn btn-sm btn-light" disabled="" type="button">Anterior</button> <button
+                                class="btn btn-sm btn-primary" type="button">Pr&oacute;ximo</button></div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-xl-4">
+                <section class="card mb-3">
+                    <div class="card-header p-3 d-flex justify-content-between">
+                        <h2 class="section-title"><i class="bi bi-bell text-danger me-1"></i>Alertas &amp; Prioridades
+                        </h2><span class="badge-soft status-danger">3 pendentes</span>
+                    </div>
+                    <div class="card-body p-3">
+                        <div class="alert-card alert-critical mb-2">
+                            <div class="d-flex justify-content-between small-label text-danger"><span>● Alerta
+                                    cr&iacute;tico</span><span>H&aacute; 12 min</span></div><b>Subesta&ccedil;&atilde;o
+                                Norte: Vazamento de &Oacute;leo</b>
+                            <p>Detectado risco iminente de contamina&ccedil;&atilde;o e superaquecimento pelo inspetor
+                                Marcos Silva.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small>#OS-8821</small><button class="btn btn-sm btn-outline-danger"
+                                    data-action="Despachar apoio t&eacute;cnico" type="button">Despachar Apoio
+                                    &rarr;</button></div>
+                        </div>
+                        <div class="alert-card alert-warning mb-2">
+                            <div class="d-flex justify-content-between small-label"><span>Alerta de
+                                    prazo</span><span>SLA em risco</span></div><b>Caldeira 03: Vencimento em 45min</b>
+                            <p>Laudo regulat&oacute;rio NR-13 expira no fim do expediente. Teste hidrost&aacute;tico
+                                pendente de upload.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small>#OS-8819</small><button class="btn btn-sm btn-outline-warning"
+                                    data-action="Cobrar checklist" type="button">Cobrar Checklist &rarr;</button></div>
+                        </div>
+                        <div class="alert-card alert-blocked">
+                            <div class="d-flex justify-content-between small-label"><span>Acesso
+                                    bloqueado</span><span>H&aacute; 35 min</span></div><b>Chiller Central: Acesso
+                                Restrito</b>
+                            <p>Portaria da planta recusou entrada por falta de crach&aacute; terceirizado integrado no
+                                sistema.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small>#OS-8814</small><button class="btn btn-sm btn-outline-primary"
+                                    data-action="Liberar portaria" type="button">Liberar Portaria &rarr;</button></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card-header p-3 d-flex justify-content-between">
+                        <h2 class="section-title"><i class="bi bi-people text-primary me-1"></i>Disponibilidade da
+                            Equipe</h2><span class="small text-muted">18 t&eacute;cnicos</span>
+                    </div>
+                    <div class="card-body px-3 py-1">
+                        <div class="list-row"><span class="avatar">LM</span>
+                            <div class="flex-grow-1"><b>Lucas Mendes</b><small class="d-block text-muted">Rota: Zona
+                                    Industrial Norte</small></div><span class="badge-soft status-info">Em rota</span>
+                        </div>
+                        <div class="list-row"><span class="avatar">RR</span>
+                            <div class="flex-grow-1"><b>Roberto Rocha</b><small class="d-block text-muted">PetroLog (40%
+                                    concl.)</small></div><span class="badge-soft status-info">Inspecionando</span>
+                        </div>
+                        <div class="list-row"><span class="avatar amber">JD</span>
+                            <div class="flex-grow-1"><b>Juliana Duarte</b><small class="d-block text-muted">Retorno em
+                                    15min</small></div><span class="badge-soft status-warn">Intervalo</span>
+                        </div>
+                        <div class="list-row"><span class="avatar">AC</span>
+                            <div class="flex-grow-1"><b>Andr&eacute; Costa</b><small class="d-block text-muted">Base
+                                    Operacional Central</small></div><span
+                                class="badge-soft status-ok">Dispon&iacute;vel</span>
+                        </div><a class="btn btn-sm btn-light text-primary w-100 mt-3" href="../acompanhamento/acompanhamento.html">Ver
+                            todos no mapa de equipes <i class="bi bi-map ms-1"></i></a>
+                    </div>
+                </section>
+                <div class="soft-panel mt-3 small"><i
+                        class="bi bi-cloud-check text-primary me-2"></i><b>Sincroniza&ccedil;&atilde;o Offline</b><span
+                        class="d-block text-muted">&Uacute;ltimo pacote h&aacute; 43 segundos</span></div>
+            </div>
+        </div>
+        <footer class="text-center text-muted small pt-4">Field Operations Supervision &amp; Compliance Infrastructure
+            &middot; Demonstra&ccedil;&atilde;o de interface</footer>
+    </main>
+</body>
+
+</html>
