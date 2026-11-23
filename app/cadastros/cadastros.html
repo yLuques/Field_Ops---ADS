@@ -1,0 +1,382 @@
+<!doctype html>
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Gest&atilde;o de Cadastros Operacionais | Field Ops</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/app/css/base.css" rel="stylesheet" />
+    <link href="/app/css/cadastros.css" rel="stylesheet" />
+</head>
+
+<body data-page="cadastros">
+    <header class="app-topbar">
+        <a class="brand" href="/app/dashboard/dashboard.html"><span class="brand-mark"><i
+                    class="bi bi-shield-check"></i></span><span>FIELD OPS<small>SUPERVISION HUB</small></span></a><span
+            class="badge text-bg-primary-subtle text-primary-emphasis d-none d-md-inline">v2.4-PRO</span><span
+            class="small-label d-none d-xl-inline"><i class="bi bi-circle-fill text-success me-1"
+                style="font-size:7px"></i>Plant&atilde;o ativo</span>
+        <div class="input-group input-group-sm top-search"><span class="input-group-text bg-light border-0"><i
+                    class="bi bi-search text-secondary"></i></span><input aria-label="Busca geral"
+                class="form-control bg-light border-0" placeholder="Buscar OS, inspetor, local..." /></div>
+        <button aria-label="Notifica&ccedil;&otilde;es" class="btn-icon position-relative" type="button"><i
+                class="bi bi-bell"></i><span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size:8px">3</span></button>
+        <div class="top-user">
+            <div class="avatar">CE</div>
+            <div class="user-meta">
+                <div class="fw-semibold small">Carlos Eduardo</div>
+                <div class="text-muted" style="font-size:.68rem">Supervisor de Campo</div>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Navega&ccedil;&atilde;o principal" class="mobile-page-nav"><a class="side-link"
+            href="../dashboard/dashboard.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link"
+            href="../acompanhamento/acompanhamento.html"><i class="bi bi-list-check"></i><span>Acompanhamento</span></a><a
+            class="side-link" href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link" href="../checklists/checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link active"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a></nav>
+    <aside class="app-sidebar">
+        <div class="nav-caption">Opera&ccedil;&otilde;es em campo</div><a class="side-link" href="../dashboard/dashboard.html"><i
+                class="bi bi-grid-1x2"></i><span>Dashboard</span></a><a class="side-link" href="../acompanhamento/acompanhamento.html"><i
+                class="bi bi-list-check"></i><span>Acompanhamento</span></a><a class="side-link"
+            href="../inspections/planejar-inspecao.html"><i class="bi bi-clipboard-plus"></i><span>Planejar
+                Inspe&ccedil;&atilde;o</span></a><a class="side-link" href="../checklists/checklists.html"><i
+                class="bi bi-ui-checks-grid"></i><span>Modelos de Checklist</span></a><a class="side-link active"
+            href="../cadastros/cadastros.html"><i class="bi bi-box-seam"></i><span>Cadastros</span></a><a class="side-link"
+            href="../inspections/revisao.html"><i class="bi bi-patch-check"></i><span>Revis&atildeo T&eacute;cnica</span></a>
+        <div class="telemetry-box">
+            <div class="d-flex justify-content-between mb-1"><strong><i class="bi bi-broadcast me-1"></i>Rede
+                    Telemetria</strong><b class="text-success">100% OK</b></div><span>18 inspetores sincronizados no
+                turno atual.</span>
+        </div>
+    </aside>
+
+    <main class="app-main">
+        <div class="page-heading">
+            <div>
+                <div class="crumb">Ativos &amp; infraestrutura <span class="mx-2">&bull;</span> Base homologada</div>
+                <h1>Gest&atilde;o de Cadastros Operacionais</h1>
+                <p>Consulte, cadastre e gerencie a base de clientes, plantas e ativos de inspe&ccedil;&atilde;o
+                    t&eacute;cnica.</p>
+            </div>
+            <div class="page-actions d-flex gap-2"><button class="btn btn-outline-secondary" id="exportAssets"
+                    type="button"><i class="bi bi-download me-1"></i>Exportar XLS</button>
+                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" type="button"><i
+                            class="bi bi-plus-lg me-1"></i>Novo Cadastro</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a aria-disabled="true" class="dropdown-item" data-new="Equipamento" tabindex="-1">Novo
+                                Equipamento <small class="d-block text-muted">TAG, specs e
+                                    calibra&ccedil;&atilde;o</small></a></li>
+                        <li><a aria-disabled="true" class="dropdown-item" data-new="Local / Planta" tabindex="-1">Novo
+                                Local / Planta <small class="d-block text-muted">Subesta&ccedil;&otilde;es, salas e
+                                    galp&otilde;es</small></a></li>
+                        <li><a aria-disabled="true" class="dropdown-item" data-new="Cliente" tabindex="-1">Novo Cliente
+                                <small class="d-block text-muted">Contrato corporativo</small></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-pills asset-tabs mb-3" id="assetTabs">
+            <li class="nav-item"><button class="nav-link active" data-type="Equipamentos" type="button"><i
+                        class="bi bi-gear-wide-connected me-1"></i>Equipamentos <b>184</b></button></li>
+            <li class="nav-item"><button class="nav-link" data-type="Locais &amp; Instala&ccedil;&otilde;es"
+                    type="button"><i class="bi bi-geo-alt me-1"></i>Locais &amp; Instala&ccedil;&otilde;es
+                    <b>42</b></button></li>
+            <li class="nav-item"><button class="nav-link" data-type="Clientes Corporativos" type="button"><i
+                        class="bi bi-building me-1"></i>Clientes Corporativos <b>28</b></button></li>
+        </ul>
+        <div class="row g-3 mb-3">
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Disponibilidade operacional</span>
+                    <div class="metric-value text-success">94,8%</div><small class="text-success">+1,2% da meta &middot;
+                        175 de 184 m&aacute;quinas</small>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Criticidade alta (Risco A)</span>
+                    <div class="metric-value text-danger">26</div><small class="text-muted">Monitoramento 24/7</small>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">Pr&oacute;ximas inspe&ccedil;&otilde;es
+                        (7d)</span>
+                    <div class="metric-value text-warning">19</div><small class="text-muted">3 em atraso</small>
+                </div>
+            </div>
+            <div class="col-6 col-xl-3">
+                <div class="card metric-card"><span class="small-label">OS conclu&iacute;das / m&ecirc;s</span>
+                    <div class="metric-value">342</div><small class="text-success">100% auditadas</small>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-xl-8">
+                <section class="card">
+                    <div class="card-body p-3">
+                        <div class="row g-2">
+                            <div class="col-lg-5"><label class="form-label">Buscar TAG / equipamento</label><input
+                                    class="form-control" id="assetSearch"
+                                    placeholder="Digite TAG, nome ou s&eacute;rie..." /></div>
+                            <div class="col-md-6 col-lg-3"><label class="form-label">Categoria</label><select
+                                    class="form-select" id="assetCategory">
+                                    <option value="">Todas as categorias</option>
+                                    <option>HVAC</option>
+                                    <option>El&eacute;trica</option>
+                                    <option>Caldeiras</option>
+                                    <option>Mec&acirc;nica</option>
+                                </select></div>
+                            <div class="col-md-6 col-lg-2"><label class="form-label">Status</label><select
+                                    class="form-select" id="assetStatus">
+                                    <option value="">Todos</option>
+                                    <option>Operante</option>
+                                    <option>Aten&ccedil;&atilde;o</option>
+                                    <option>Manuten&ccedil;&atilde;o</option>
+                                </select></div>
+                            <div class="col-lg-2 d-flex align-items-end"><button class="btn btn-primary w-100"
+                                    id="filterAssets" type="button"><i class="bi bi-funnel me-1"></i>Filtrar</button>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="small text-muted">Filtros ativos: <span class="badge text-bg-light">Turno
+                                    integral</span> <span class="badge text-bg-light">Sudeste &amp; Sul</span></div>
+                            <button class="btn btn-link btn-sm text-decoration-none" id="clearAssets"
+                                type="button">Limpar</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle" id="assetTable">
+                            <thead>
+                                <tr>
+                                    <th><input class="form-check-input" id="selectAllAssets" type="checkbox" /></th>
+                                    <th>TAG / Equipamento</th>
+                                    <th>Cliente associado</th>
+                                    <th>Local / Planta</th>
+                                    <th>Criticidade</th>
+                                    <th>&Uacute;ltima &rarr; Pr&oacute;xima</th>
+                                    <th>Status</th>
+                                    <th>A&ccedil;&otilde;es</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-category="Mec&acirc;nica" data-status="Operante"
+                                    data-tag="TAG-GER-09 Gerador Diesel Scania">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-GER-09</b><b class="d-block">Gerador Diesel Scania
+                                            500kVA</b><small class="text-muted">S&eacute;rie: SC-883492-X</small></td>
+                                    <td>PetroLog&iacute;stica S.A.<small class="d-block text-muted">Contrato Master
+                                            #4012</small></td>
+                                    <td>Edif&iacute;cio Central<small class="d-block text-muted">Sala de M&aacute;quinas
+                                            Subsolo</small></td>
+                                    <td><span class="badge-soft status-danger">Alta</span></td>
+                                    <td>14/05/2024<small class="d-block text-muted">28/05/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" title="Ver dossi&ecirc;" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="El&eacute;trica" data-status="Aten&ccedil;&atilde;o"
+                                    data-tag="TAG-TRAFO-02 Transformador &Oacute;leo">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-TRAFO-02</b><b class="d-block">Transformador
+                                            &Oacute;leo 1000kVA</b><small class="text-muted">S&eacute;rie:
+                                            WEG-TR-9182</small></td>
+                                    <td>Vale Ind&uacute;stria<small class="d-block text-muted">Unidade
+                                            Pelotiza&ccedil;&atilde;o</small></td>
+                                    <td>Subesta&ccedil;&atilde;o SE-03<small class="d-block text-muted">P&aacute;tio
+                                            Externo Alta Tens&atilde;o</small></td>
+                                    <td><span class="badge-soft status-danger">Alta</span></td>
+                                    <td>02/05/2024<small class="d-block text-danger">16/05/2024 (Hoje)</small></td>
+                                    <td><span class="badge-soft status-warn">Aten&ccedil;&atilde;o</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="HVAC" data-status="Operante"
+                                    data-tag="TAG-CHILL-01 Chiller Centr&iacute;fugo York">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-CHILL-01</b><b class="d-block">Chiller
+                                            Centr&iacute;fugo York 350TR</b><small class="text-muted">S&eacute;rie:
+                                            YK-44210-B</small></td>
+                                    <td>BioTech Labs<small class="d-block text-muted">Campus Farma Tech</small></td>
+                                    <td>Central de &Aacute;gua Gelada<small class="d-block text-muted">Cobertura Bloco
+                                            B</small></td>
+                                    <td><span class="badge-soft status-warn">M&eacute;dia</span></td>
+                                    <td>25/04/2024<small class="d-block text-muted">25/05/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="Caldeiras" data-status="Manuten&ccedil;&atilde;o"
+                                    data-tag="TAG-CALD-04 Caldeira Flamotubular">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-CALD-04</b><b class="d-block">Caldeira Flamotubular
+                                            10t/h</b><small class="text-muted">S&eacute;rie: ATA-CAL-2021</small></td>
+                                    <td>Vale Ind&uacute;stria<small class="d-block text-muted">Planta de
+                                            Beneficiamento</small></td>
+                                    <td>Galp&atilde;o de Utilidades<small class="d-block text-muted">&Aacute;rea
+                                            T&eacute;rmica Norte</small></td>
+                                    <td><span class="badge-soft status-danger">Alta</span></td>
+                                    <td>10/04/2024<small class="d-block text-danger">10/05/2024 (Atraso 6d)</small></td>
+                                    <td><span class="badge-soft status-warn">Manuten&ccedil;&atilde;o</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="Mec&acirc;nica" data-status="Operante"
+                                    data-tag="TAG-BOMB-12 Bomba Centr&iacute;fuga KSB">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-BOMB-12</b><b class="d-block">Bomba Centr&iacute;fuga
+                                            KSB 75CV</b><small class="text-muted">S&eacute;rie: KSB-MEGA-048</small>
+                                    </td>
+                                    <td>PetroLog&iacute;stica S.A.<small class="d-block text-muted">Terminal
+                                            Portu&aacute;rio</small></td>
+                                    <td>Casa de Bombas CP-01<small class="d-block text-muted">P&iacute;er de
+                                            Combust&iacute;veis</small></td>
+                                    <td><span class="badge-soft status-neutral">Baixa</span></td>
+                                    <td>08/05/2024<small class="d-block text-muted">08/06/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="Mec&acirc;nica" data-status="Operante"
+                                    data-tag="TAG-COMP-03 Compressor Parafuso">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-COMP-03</b><b class="d-block">Compressor Parafuso Atlas
+                                            Copco</b><small class="text-muted">S&eacute;rie: GA-75-VSD</small></td>
+                                    <td>BioTech Labs<small class="d-block text-muted">Centro de Vacinas</small></td>
+                                    <td>Galp&atilde;o de Ar Comprimido</td>
+                                    <td><span class="badge-soft status-warn">M&eacute;dia</span></td>
+                                    <td>05/05/2024<small class="d-block text-muted">05/06/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="El&eacute;trica" data-status="Operante"
+                                    data-tag="TAG-QGBT-05 Quadro Geral">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-QGBT-05</b><b class="d-block">Quadro Geral Baixa
+                                            Tens&atilde;o 3200A</b><small class="text-muted">S&eacute;rie:
+                                            SCH-Prisma-01</small></td>
+                                    <td>Vale Ind&uacute;stria<small class="d-block text-muted">Complexo
+                                            Minera&ccedil;&atilde;o</small></td>
+                                    <td>Sala El&eacute;trica Central</td>
+                                    <td><span class="badge-soft status-danger">Alta</span></td>
+                                    <td>12/05/2024<small class="d-block text-muted">26/05/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                                <tr data-category="El&eacute;trica" data-status="Operante"
+                                    data-tag="TAG-NOBR-01 Nobreak Modular">
+                                    <td><input class="form-check-input row-asset" type="checkbox" /></td>
+                                    <td><b class="table-tag">TAG-NOBR-01</b><b class="d-block">Nobreak Modular
+                                            120kVA</b><small class="text-muted">S&eacute;rie: APC-SYMM-99</small></td>
+                                    <td>PetroLog&iacute;stica S.A.<small class="d-block text-muted">Data Center
+                                            Matriz</small></td>
+                                    <td>Sala de Servidores TI</td>
+                                    <td><span class="badge-soft status-danger">Alta</span></td>
+                                    <td>01/05/2024<small class="d-block text-muted">01/06/2024</small></td>
+                                    <td><span class="badge-soft status-ok">Operante</span></td>
+                                    <td><button class="btn-icon asset-view" type="button"><i
+                                                class="bi bi-eye"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer bg-white d-flex justify-content-between"><small class="text-muted"
+                            id="assetCount">Mostrando 1 a 8 de 184 equipamentos</small>
+                        <nav>
+                            <ul class="pagination pagination-sm mb-0">
+                                <li class="page-item disabled"><a class="page-link">&lsaquo;</a></li>
+                                <li class="page-item active"><a class="page-link">1</a></li>
+                                <li class="page-item"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link">3</a></li>
+                                <li class="page-item"><a class="page-link">&hellip; 23</a></li>
+                                <li class="page-item"><a class="page-link">&rsaquo;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <div class="d-flex flex-wrap gap-2 mt-3"><button class="btn btn-primary btn-sm"
+                        data-bulk="Emitir ordem de servi&ccedil;o" type="button"><i
+                            class="bi bi-clipboard-check me-1"></i>Emitir Ordem de Servi&ccedil;o
+                        Imediata</button><button class="btn btn-outline-secondary btn-sm" data-bulk="Imprimir TAG"
+                        type="button"><i class="bi bi-qr-code me-1"></i>Imprimir TAG</button><button
+                        class="btn btn-outline-secondary btn-sm" data-bulk="Abrir hist&oacute;rico" type="button"><i
+                            class="bi bi-clock-history me-1"></i>Hist&oacute;rico (24)</button></div>
+            </div>
+            <aside class="col-xl-4">
+                <section class="card dossier-card">
+                    <div class="card-header p-3 d-flex justify-content-between">
+                        <div>
+                            <h2 class="section-title">Dossi&ecirc; do Equipamento</h2><small class="text-muted"
+                                id="dossierTag">TAG-GER-09</small>
+                        </div><span class="badge-soft status-ok">Ativo</span>
+                    </div>
+                    <div class="card-body p-3">
+                        <div class="dossier-image"><i class="bi bi-gear-wide-connected"></i><span>GRUPO GERADOR</span>
+                        </div>
+                        <h3 class="h6 fw-bold mt-3" id="dossierName">Grupo Gerador de Emerg&ecirc;ncia</h3>
+                        <p class="small text-muted mb-3">Scania DC13 500kVA</p>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <div class="soft-panel"><small class="text-muted">&Iacute;ndice MTBF</small><b
+                                        class="d-block fs-5">1.480h</b><small class="text-success">+8% acima
+                                        ref.</small></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="soft-panel"><small class="text-muted">Conformidade NR-10/12</small><b
+                                        class="d-block fs-5 text-success">100% OK</b><small class="text-muted">Laudo
+                                        vigente</small></div>
+                            </div>
+                        </div>
+                        <div class="small mt-3">
+                            <div class="d-flex justify-content-between py-2 border-bottom"><span
+                                    class="text-muted">Cliente</span><b>PetroLog&iacute;stica S.A.</b></div>
+                            <div class="d-flex justify-content-between py-2 border-bottom"><span
+                                    class="text-muted">Planta / Setor</span><b>Ed. Central / Subsolo 02</b></div>
+                            <div class="d-flex justify-content-between py-2 border-bottom"><span
+                                    class="text-muted">&Uacute;ltimo inspetor</span><b>Eng. Marcos Val&eacute;rio</b>
+                            </div>
+                            <div class="d-flex justify-content-between py-2"><span class="text-muted">Hor&iacute;metro
+                                    acumulado</span><b>3.412,4 h</b></div>
+                        </div>
+                        <h3 class="section-title mt-3 mb-2">Telemetria de Vibra&ccedil;&atilde;o (RMS mm/s)</h3>
+                        <div class="telemetry-spark">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>08:00</span><span>10:00</span><span>12:00</span><span>14:00</span><span>16:00</span>
+                        </div>
+                        <div class="small fw-semibold mt-2">1,8 mm/s <span class="text-success">(Normal)</span></div>
+                        <div class="d-grid gap-2 mt-3"><button class="btn btn-primary btn-sm"
+                                data-bulk="Emitir ordem de servi&ccedil;o" type="button"><i
+                                    class="bi bi-clipboard-plus me-1"></i>Emitir OS imediata</button><button
+                                class="btn btn-outline-secondary btn-sm" data-bulk="Imprimir TAG" type="button"><i
+                                    class="bi bi-qr-code me-1"></i>Imprimir TAG</button><button
+                                class="btn btn-outline-secondary btn-sm" data-bulk="Hist&oacute;rico do equipamento"
+                                type="button"><i class="bi bi-clock-history me-1"></i>Hist&oacute;rico (24)</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="card p-3 mt-3">
+                    <h2 class="section-title">Geolocaliza&ccedil;&atilde;o &amp; Planta</h2>
+                    <div class="map-placeholder mt-2"><i class="bi bi-geo-alt-fill fs-2 text-primary"></i><span>Planta
+                            operacional &middot; acesso controlado</span></div><small class="text-muted mt-2">Lat:
+                        -23.9608, Long: -46.3336</small><small class="text-danger mt-1">Acesso restrito: requer
+                        credencial de seguran&ccedil;a NR-10 e NR-35.</small>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="text-center text-muted small pt-4">Field Operations Supervision &amp; Compliance Infrastructure
+            &middot; Demonstra&ccedil;&atilde;o de interface</footer>
+    </main>
+</body>
+
+</html>
