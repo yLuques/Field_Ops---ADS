@@ -1,0 +1,226 @@
+
+<section class="lista-equipamentos">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="titulo-lista">Lista de Equipamentos</h2>
+            <p class="texto-lista">Visualização dos equipamentos cadastrados na operação.</p>
+        </div>
+        <span class="badge bg-primary-subtle text-primary">184 equipamentos</span>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-6 col-xl-3">
+            <div class="card indicador-equipamento">
+                <span>Total de equipamentos</span>
+                <strong>184</strong>
+                <small>Equipamentos registrados</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card indicador-equipamento">
+                <span>Operantes</span>
+                <strong class="text-success">158</strong>
+                <small>Em funcionamento</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card indicador-equipamento">
+                <span>Em atenção</span>
+                <strong class="text-warning">18</strong>
+                <small>Necessitam acompanhamento</small>
+            </div>
+        </div>
+
+        <div class="col-6 col-xl-3">
+            <div class="card indicador-equipamento">
+                <span>Em manutenção</span>
+                <strong class="text-danger">8</strong>
+                <small>Indisponíveis temporariamente</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Filtros -->
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <h3 class="subtitulo-lista">Buscar equipamentos</h3>
+
+            <div class="row g-3">
+
+                <div class="col-lg-4">
+                    <label class="form-label">Nome ou TAG</label>
+                    <input type="text" class="form-control"
+                        placeholder="Ex.: TAG-GER-09">
+                </div>
+
+                <div class="col-lg-2">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select">
+                        <option>Todas</option>
+                        <option>Elétrica</option>
+                        <option>Mecânica</option>
+                        <option>HVAC</option>
+                        <option>Caldeiras</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Todos</option>
+                        <option>Operante</option>
+                        <option>Atenção</option>
+                        <option>Manutenção</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2">
+                    <label class="form-label">Criticidade</label>
+                    <select class="form-select">
+                        <option>Todas</option>
+                        <option>Alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-2 d-flex align-items-end">
+                    <button class="btn btn-primary w-100" type="button">
+                        <i class="bi bi-search me-1"></i>Buscar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabela -->
+    <div class="card">
+
+        <div class="card-header bg-white py-3">
+            <h3 class="subtitulo-lista mb-0">Equipamentos registrados</h3>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table tabela-equipamentos align-middle">
+
+                <thead>
+                    <tr>
+                        <th>TAG</th>
+                        <th>Equipamento</th>
+                        <th>Categoria</th>
+                        <th>Cliente</th>
+                        <th>Localização</th>
+                        <th>Criticidade</th>
+                        <th>Status</th>
+                        <th>Última inspeção</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td><strong>TAG-GER-09</strong></td>
+                        <td>Gerador Diesel Scania 500kVA</td>
+                        <td>Mecânica</td>
+                        <td>PetroLogística S.A.</td>
+                        <td>Edifício Central</td>
+                        <td><span class="nivel-alto">Alta</span></td>
+                        <td><span class="status-operante">Operante</span></td>
+                        <td>14/05/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TAG-TRAFO-02</strong></td>
+                        <td>Transformador Óleo 1000kVA</td>
+                        <td>Elétrica</td>
+                        <td>Vale Indústria</td>
+                        <td>Subestação SE-03</td>
+                        <td><span class="nivel-alto">Alta</span></td>
+                        <td><span class="status-atencao">Atenção</span></td>
+                        <td>02/05/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TAG-CHILL-01</strong></td>
+                        <td>Chiller Centrífugo York</td>
+                        <td>HVAC</td>
+                        <td>BioTech Labs</td>
+                        <td>Central de Água Gelada</td>
+                        <td><span class="nivel-medio">Média</span></td>
+                        <td><span class="status-operante">Operante</span></td>
+                        <td>25/04/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TAG-CALD-04</strong></td>
+                        <td>Caldeira Flamotubular 10t/h</td>
+                        <td>Caldeiras</td>
+                        <td>Vale Indústria</td>
+                        <td>Galpão de Utilidades</td>
+                        <td><span class="nivel-alto">Alta</span></td>
+                        <td><span class="status-manutencao">Manutenção</span></td>
+                        <td>10/04/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TAG-BOMB-12</strong></td>
+                        <td>Bomba Centrífuga KSB 75CV</td>
+                        <td>Mecânica</td>
+                        <td>PetroLogística S.A.</td>
+                        <td>Casa de Bombas CP-01</td>
+                        <td><span class="nivel-baixo">Baixa</span></td>
+                        <td><span class="status-operante">Operante</span></td>
+                        <td>08/05/2024</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>TAG-COMP-03</strong></td>
+                        <td>Compressor Atlas Copco</td>
+                        <td>Mecânica</td>
+                        <td>BioTech Labs</td>
+                        <td>Galpão de Ar Comprimido</td>
+                        <td><span class="nivel-medio">Média</span></td>
+                        <td><span class="status-operante">Operante</span></td>
+                        <td>05/05/2024</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Paginação -->
+        <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+            <small class="text-muted">Mostrando 1 a 6 de 184 equipamentos</small>
+
+            <nav>
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled">
+                        <a class="page-link">Anterior</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link">Próximo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,153 @@
+
+.lista-equipamentos {
+    width: 100%;
+}
+
+.lista-equipamentos .titulo-lista {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #263b50;
+}
+
+.lista-equipamentos .texto-lista {
+    font-size: .85rem;
+    color: #718096;
+}
+
+.lista-equipamentos .indicador-equipamento {
+    padding: 18px;
+    border: 1px solid #e1e8f0;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.lista-equipamentos .indicador-equipamento span {
+    font-size: .75rem;
+    color: #718096;
+    font-weight: 600;
+}
+
+.lista-equipamentos .indicador-equipamento strong {
+    display: block;
+    font-size: 1.8rem;
+    margin: 7px 0;
+}
+
+.lista-equipamentos .indicador-equipamento small {
+    color: #8795a5;
+    font-size: .72rem;
+}
+
+.lista-equipamentos .subtitulo-lista {
+    font-size: .95rem;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.lista-equipamentos .form-label {
+    font-size: .78rem;
+    font-weight: 600;
+    color: #53677d;
+}
+
+.lista-equipamentos .form-control,
+.lista-equipamentos .form-select {
+    font-size: .82rem;
+    border-color: #dce5ed;
+    border-radius: 7px;
+    min-height: 39px;
+}
+
+.lista-equipamentos .tabela-equipamentos {
+    font-size: .78rem;
+    margin-bottom: 0;
+}
+
+.lista-equipamentos .tabela-equipamentos thead th {
+    background: #f5f8fb;
+    color: #53677d;
+    font-size: .72rem;
+    white-space: nowrap;
+    padding: 14px;
+}
+
+.lista-equipamentos .tabela-equipamentos tbody td {
+    padding: 14px;
+    color: #40566c;
+    border-bottom: 1px solid #edf1f5;
+    white-space: nowrap;
+}
+
+.lista-equipamentos .tabela-equipamentos tbody tr:hover {
+    background: #f5f9fd;
+}
+
+.lista-equipamentos .nivel-alto,
+.lista-equipamentos .nivel-medio,
+.lista-equipamentos .nivel-baixo,
+.lista-equipamentos .status-operante,
+.lista-equipamentos .status-atencao,
+.lista-equipamentos .status-manutencao {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.lista-equipamentos .nivel-alto {
+    background: #fde8e8;
+    color: #c53030;
+}
+
+.lista-equipamentos .nivel-medio {
+    background: #fff4d9;
+    color: #b7791f;
+}
+
+.lista-equipamentos .nivel-baixo {
+    background: #e5f6ed;
+    color: #198754;
+}
+
+.lista-equipamentos .status-operante {
+    background: #e5f6ed;
+    color: #198754;
+}
+
+.lista-equipamentos .status-atencao {
+    background: #fff4d9;
+    color: #b7791f;
+}
+
+.lista-equipamentos .status-manutencao {
+    background: #fde8e8;
+    color: #c53030;
+}
+
+.lista-equipamentos .card {
+    border: 1px solid #e1e8f0;
+    border-radius: 10px;
+}
+
+.lista-equipamentos .pagination .page-link {
+    color: #087eb5;
+    font-size: .75rem;
+}
+
+.lista-equipamentos .pagination .active .page-link {
+    background: #087eb5;
+    border-color: #087eb5;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .lista-equipamentos .titulo-lista {
+        font-size: 1.15rem;
+    }
+
+    .lista-equipamentos .card-header {
+        padding: 12px;
+    }
+}
