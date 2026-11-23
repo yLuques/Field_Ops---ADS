@@ -1,0 +1,71 @@
+
+<section class="card mb-3">
+    <div class="card-header p-3 d-flex justify-content-between">
+        <h2 class="section-title">
+            <i class="bi bi-bell text-danger me-1"></i>
+            Alertas &amp; Prioridades
+        </h2>
+        <span class="badge-soft status-danger">3 pendentes</span>
+    </div>
+
+    <div class="card-body p-3">
+
+        <div class="alert-card alert-critical mb-2">
+            <div class="d-flex justify-content-between small-label text-danger">
+                <span>● Alerta crítico</span>
+                <span>Há 12 min</span>
+            </div>
+            <b>Subestação Norte: Vazamento de Óleo</b>
+            <p>
+                Detectado risco iminente de contaminação e superaquecimento
+                pelo inspetor Marcos Silva.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small>#OS-8821</small>
+                <button class="btn btn-sm btn-outline-danger"
+                    data-action="Despachar apoio técnico" type="button">
+                    Despachar Apoio →
+                </button>
+            </div>
+        </div>
+
+        <div class="alert-card alert-warning mb-2">
+            <div class="d-flex justify-content-between small-label">
+                <span>Alerta de prazo</span>
+                <span>SLA em risco</span>
+            </div>
+            <b>Caldeira 03: Vencimento em 45min</b>
+            <p>
+                Laudo regulatório NR-13 expira no fim do expediente.
+                Teste hidrostático pendente de upload.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small>#OS-8819</small>
+                <button class="btn btn-sm btn-outline-warning"
+                    data-action="Cobrar checklist" type="button">
+                    Cobrar Checklist →
+                </button>
+            </div>
+        </div>
+
+        <div class="alert-card alert-blocked">
+            <div class="d-flex justify-content-between small-label">
+                <span>Acesso bloqueado</span>
+                <span>Há 35 min</span>
+            </div>
+            <b>Chiller Central: Acesso Restrito</b>
+            <p>
+                Portaria da planta recusou entrada por falta de
+                crachá terceirizado integrado no sistema.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small>#OS-8814</small>
+                <button class="btn btn-sm btn-outline-primary"
+                    data-action="Liberar portaria" type="button">
+                    Liberar Portaria →
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
